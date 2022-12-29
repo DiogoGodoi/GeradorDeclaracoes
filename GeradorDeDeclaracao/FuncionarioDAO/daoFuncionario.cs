@@ -200,7 +200,7 @@ namespace FuncionarioDAO
             try
             {
                 conn.Open();
-                string query = "SELECT cracha, nome FROM Funcionario WHERE nome LIKE @nome";
+                string query = "SELECT * FROM Funcionario WHERE nome LIKE @nome";
                 MySqlCommand comando = new MySqlCommand(query, conn);
                 comando.Parameters.AddWithValue("@nome", pNome + "%");
                 comando.CommandType = CommandType.Text;
