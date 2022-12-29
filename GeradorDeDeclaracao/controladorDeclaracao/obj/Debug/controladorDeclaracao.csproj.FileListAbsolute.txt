@@ -1,0 +1,12 @@
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\controladorDeclaracao.dll
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\controladorDeclaracao.pdb
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\itextsharp.dll
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\itextsharp.xml
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.csproj.AssemblyReference.cache
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.csproj.CoreCompileInputs.cache
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.csproj.CopyComplete
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.dll
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.pdb
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\Funcionario.dll
+C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\Funcionario.pdb
