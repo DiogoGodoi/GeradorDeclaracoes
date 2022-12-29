@@ -35,7 +35,7 @@ namespace GeradorDeDeclaracao
         {
             nome = txtPesquisa.Text;
             var dados = controlador.searchName(nome);
-            if(dados == true)
+            if(dados != null)
             {
             dtFuncionarios.DataSource = dados;
             }
@@ -103,7 +103,7 @@ namespace GeradorDeDeclaracao
             nome = dtFuncionarios.SelectedCells[0].Value.ToString();
             var dados = controlador.searchName(nome);
 
-            if (dados == true)
+            if (dados != null)
             {
                 txtCracha.Text = controlador.getCracha().ToString();
                 txtNome.Text = controlador.getNome();

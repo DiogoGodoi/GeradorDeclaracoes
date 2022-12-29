@@ -95,7 +95,7 @@ namespace FuncionarioDAO
             try
             {
                 conn.Open();
-                string query = "SELECT cracha, nome FROM Funcionario";
+                string query = "SELECT cracha, nome FROM Funcionario ORDER BY nome ASC";
                 MySqlCommand comando = new MySqlCommand(query, conn);
                 comando.CommandType = CommandType.Text;
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
@@ -193,16 +193,16 @@ namespace FuncionarioDAO
                 conn.Close();
             }
         }
-        public static bool searchName(string pNome)
+        public static DataTable searchName(string pNome)
         {
             string acessDB = @"Persist Security Info=False; server=localhost;database=declaracoes;uid=root;pwd=T21nfr@--";
             MySqlConnection conn = new MySqlConnection(acessDB);
             try
             {
                 conn.Open();
-                string query = "SELECT * FROM Funcionario WHERE nome = @nome";
+                string query = "SELECT cracha, nome FROM Funcionario WHERE nome LIKE @nome";
                 MySqlCommand comando = new MySqlCommand(query, conn);
-                comando.Parameters.AddWithValue("@nome", pNome);
+                comando.Parameters.AddWithValue("@nome", pNome + "%");
                 comando.CommandType = CommandType.Text;
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                 DataTable tabela = new DataTable();
@@ -215,18 +215,18 @@ namespace FuncionarioDAO
                     setor = leitura["setor"].ToString();
                     cargo = leitura["cargo"].ToString();
                     conn.Close();
-                    return true;
+                    return tabela;
                 }
                 else
                 {
                     conn.Close();
-                    return false;
+                    return null;
                 }
             }
             catch
             {
                 conn.Close();
-                return false;
+                return null;
                 throw;
             }
             finally

@@ -47,7 +47,7 @@ namespace Controlador
         {
             return daoFuncionario.search(cracha);
         }
-        public static bool searchName(string nome)
+        public static DataTable searchName(string nome)
         {
             return daoFuncionario.searchName(nome);
         }
