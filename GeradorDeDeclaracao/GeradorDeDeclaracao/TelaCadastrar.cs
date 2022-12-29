@@ -331,10 +331,20 @@ namespace GeradorDeDeclaracao
                 DataTable retorno = controlador.insert(mdlFuncionario);
                 if (retorno == null)
                 {
+                    txtCracha.Text = String.Empty;
+                    txtNome.Text = String.Empty;
+                    txtSetor.Text = String.Empty;
+                    txtCargo.Text = String.Empty;
+                    txtCracha.Focus();
                     MessageBox.Show("Cadastrado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
+                    txtCracha.Text = String.Empty;
+                    txtNome.Text = String.Empty;
+                    txtSetor.Text = String.Empty;
+                    txtCargo.Text = String.Empty;
+                    txtCracha.Focus();
                     MessageBox.Show("Erro", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -170,9 +170,13 @@
     <None Include="Resources\erro.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\controladorDeclaracao\controladorDeclaracao.csproj">
+    <ProjectReference Include="..\controladorDeclaracao\ControladorDeclaracao.csproj">
       <Project>{4004e588-a108-43ee-bea7-6e1a14867962}</Project>
-      <Name>controladorDeclaracao</Name>
+      <Name>ControladorDeclaracao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControladorTelas\ControladorTelas.csproj">
+      <Project>{c3f89b76-7c0c-441e-af2f-47829dcd6b5d}</Project>
+      <Name>ControladorTelas</Name>
     </ProjectReference>
     <ProjectReference Include="..\Controlador\Controlador.csproj">
       <Project>{da1fe635-9e22-4bba-8950-8957b5751335}</Project>

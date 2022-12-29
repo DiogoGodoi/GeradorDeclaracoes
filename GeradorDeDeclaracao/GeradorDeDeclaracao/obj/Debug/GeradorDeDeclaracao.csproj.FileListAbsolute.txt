@@ -112,3 +112,5 @@ C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaraca
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.csproj.CopyComplete
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.exe
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.pdb
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\ControladorTelas.dll
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\ControladorTelas.pdb

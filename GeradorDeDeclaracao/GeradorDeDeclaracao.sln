@@ -19,7 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funcionario", "Funcionario\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controlador", "Controlador\Controlador.csproj", "{DA1FE635-9E22-4BBA-8950-8957B5751335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controladorDeclaracao", "controladorDeclaracao\controladorDeclaracao.csproj", "{4004E588-A108-43EE-BEA7-6E1A14867962}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControladorDeclaracao", "controladorDeclaracao\ControladorDeclaracao.csproj", "{4004E588-A108-43EE-BEA7-6E1A14867962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControladorTelas", "ControladorTelas\ControladorTelas.csproj", "{C3F89B76-7C0C-441E-AF2F-47829DCD6B5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{4004E588-A108-43EE-BEA7-6E1A14867962}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4004E588-A108-43EE-BEA7-6E1A14867962}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4004E588-A108-43EE-BEA7-6E1A14867962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F89B76-7C0C-441E-AF2F-47829DCD6B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F89B76-7C0C-441E-AF2F-47829DCD6B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F89B76-7C0C-441E-AF2F-47829DCD6B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F89B76-7C0C-441E-AF2F-47829DCD6B5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{FD01873D-101F-4092-B6E4-6E6CEB2021A3} = {042903C2-A257-4994-A9C0-B90E795085F7}
 		{DA1FE635-9E22-4BBA-8950-8957B5751335} = {C4D9C3D7-B58B-48D5-AA54-7A0ACE84137D}
 		{4004E588-A108-43EE-BEA7-6E1A14867962} = {C4D9C3D7-B58B-48D5-AA54-7A0ACE84137D}
+		{C3F89B76-7C0C-441E-AF2F-47829DCD6B5D} = {C4D9C3D7-B58B-48D5-AA54-7A0ACE84137D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {39F58A10-4088-434D-9219-F5DE21219EF8}

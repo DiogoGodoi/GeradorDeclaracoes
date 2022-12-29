@@ -1,0 +1,6 @@
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\ControladorTelas\bin\Debug\ControladorTelas.dll
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\ControladorTelas\bin\Debug\ControladorTelas.pdb
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\ControladorTelas\obj\Debug\ControladorTelas.csproj.AssemblyReference.cache
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\ControladorTelas\obj\Debug\ControladorTelas.csproj.CoreCompileInputs.cache
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\ControladorTelas\obj\Debug\ControladorTelas.dll
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\ControladorTelas\obj\Debug\ControladorTelas.pdb

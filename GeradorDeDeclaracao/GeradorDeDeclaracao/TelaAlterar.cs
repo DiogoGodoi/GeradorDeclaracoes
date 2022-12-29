@@ -353,10 +353,20 @@ namespace GeradorDeDeclaracao
 
             if(retorno == true)
             {
+                txtCracha.Text = String.Empty;
+                txtNome.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+                txtCracha.Focus();
                 MessageBox.Show("Alterado com sucesso", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+                txtCracha.Text = String.Empty;
+                txtNome.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+                txtCracha.Focus();
                 MessageBox.Show("Erro na exclusão", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 

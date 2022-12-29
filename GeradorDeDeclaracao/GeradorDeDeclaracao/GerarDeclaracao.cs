@@ -12,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using ControladorTelas;
 
 namespace GeradorDeDeclaracao
 {
@@ -48,8 +49,7 @@ namespace GeradorDeDeclaracao
             cargo = txtCargo.Text;
 
             if (cracha.ToString() == String.Empty || nome == String.Empty || 
-                setor == String.Empty || cargo == String.Empty || data == String.Empty || horario == String.Empty ||
-                momento == String.Empty)
+                setor == String.Empty || cargo == String.Empty || data == String.Empty || horario == String.Empty)
             {
                 MessageBox.Show("Verifique se todos os dados estão preenchidos", "Erro !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -75,11 +75,32 @@ namespace GeradorDeDeclaracao
         }
         private void btnGerar_Click_1(object sender, EventArgs e)
         {
-            declaracoes();
+            if(controladorTelas.getTela() == "1")
+            {
+                declaracaoPonto();
+            }
+            else if (controladorTelas.getTela() == "2")
+            {
+                declaracaoAviso("AVISO ANTECIPADO");
+            }else if (controladorTelas.getTela() == "3")
+            {
+                declaracaoSaida("SAÍDA ANTECIPADA");
+            }
         }
         private void btnGerarTudo_Click(object sender, EventArgs e)
         {
-            todasDeclaracoes();
+            if (controladorTelas.getTela() == "1")
+            {
+                declaracaoPontoTudo();
+            }
+            else if (controladorTelas.getTela() == "2")
+            {
+                declaracaoAvisoTudo("AVISO ANTECIPADO");
+            }
+            else if (controladorTelas.getTela() == "3")
+            {
+                declaracaoSaidaTudo("SAÍDA ANTECIPADA");
+            }
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -88,9 +109,25 @@ namespace GeradorDeDeclaracao
             _thread.Start();
             this.Close();
         }
-        public void abrirJanelaMenuDeclaracoes()
+        private void radRetornoAlmoco_CheckedChanged(object sender, EventArgs e)
         {
-            Application.Run(new frmMenuDeclaracao());
+            momento = "no retorno do Almoço";
+        }
+        private void radSaidaExpediente_CheckedChanged(object sender, EventArgs e)
+        {
+            momento = "na saída do expediente";
+        }
+        private void radSaidaAlmoco_CheckedChanged(object sender, EventArgs e)
+        {
+            momento = "na saída para o Almoço";
+        }
+        private void radEntrada_CheckedChanged(object sender, EventArgs e)
+        {
+            momento = "na entrada do expediente";
+        }
+        private void radOutro_CheckedChanged(object sender, EventArgs e)
+        {
+            txtOutro.Enabled = true;
         }
         private void frmGerarDeclacarao_Load(object sender, EventArgs e)
         {
@@ -115,23 +152,11 @@ namespace GeradorDeDeclaracao
                 MessageBox.Show("Sem dados");
             }
         }
-        private void radRetornoAlmoco_CheckedChanged(object sender, EventArgs e)
+        public void abrirJanelaMenuDeclaracoes()
         {
-            momento = "no retorno do Almoço";
+            Application.Run(new frmMenuDeclaracao());
         }
-        private void radSaidaExpediente_CheckedChanged(object sender, EventArgs e)
-        {
-            momento = "na saída do expediente";
-        }
-        private void radSaidaAlmoco_CheckedChanged(object sender, EventArgs e)
-        {
-            momento = "na saída para o Almoço";
-        }
-        private void radEntrada_CheckedChanged(object sender, EventArgs e)
-        {
-            momento = "na entrada do expediente";
-        }
-        private void declaracoes()
+        private void declaracaoPonto()
         {
             try
             {
@@ -186,7 +211,7 @@ namespace GeradorDeDeclaracao
                 MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void todasDeclaracoes()
+        private void declaracaoPontoTudo()
         {
             try
             {
@@ -237,5 +262,222 @@ namespace GeradorDeDeclaracao
                 MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void declaracaoAviso(string titulo)
+        {
+            try
+            {
+                if (txtNome.Text == String.Empty
+                    || txtCracha.Text == String.Empty
+                    || txtCargo.Text == String.Empty
+                    || txtSetor.Text == String.Empty
+                    )
+                {
+                    MessageBox.Show("Verifique se todos os dados foram preenchidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    momento = txtOutro.Text;
+                    data = Interaction.InputBox("Informe a data", "Informe");
+                    horario = Interaction.InputBox("Informe a hora", "Hora");
+
+                    if (data != "" && horario != "")
+                    {
+                        SaveFileDialog salvar = new SaveFileDialog();
+                        salvar.Filter = ".PDF | .pdf";
+                        salvar.FilterIndex = 2;
+                        salvar.FileName = "Arquivo";
+
+                        if (salvar.ShowDialog() == DialogResult.OK)
+                        {
+                            txtCracha.Text = String.Empty;
+                            txtNome.Text = String.Empty;
+                            txtSetor.Text = String.Empty;
+                            txtCargo.Text = String.Empty;
+                            listFuncionario.Items.Clear();
+                            radEntrada.Checked = false;
+                            radSaidaAlmoco.Checked = false;
+                            radRetornoAlmoco.Checked = false;
+                            radSaidaExpediente.Checked = false;
+                            geradorDeclaracao.declaracaoAntecipada(listaFuncionario, salvar.FileName, titulo, momento.ToUpper(), data, horario);
+                            MessageBox.Show("Arquivo Salvo", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                txtCracha.Text = String.Empty;
+                txtNome.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+                radEntrada.Checked = false;
+                radSaidaAlmoco.Checked = false;
+                radRetornoAlmoco.Checked = false;
+                radSaidaExpediente.Checked = false;
+                listFuncionario.Items.Clear();
+                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto"+ ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void declaracaoAvisoTudo(string titulo)
+        {
+            try
+            {
+                txtNome.Text = String.Empty;
+                txtCracha.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+
+                var dados = controlador.read();
+                momento = txtOutro.Text;
+                data = Interaction.InputBox("Informe a data", "Informe");
+                horario = Interaction.InputBox("Informe a hora", "Hora");
+
+                if (data != "" && horario != "")
+                {
+                    SaveFileDialog salvar = new SaveFileDialog();
+                    salvar.Filter = ".PDF | .pdf";
+                    salvar.FilterIndex = 2;
+                    salvar.FileName = "Arquivo";
+
+                    if (salvar.ShowDialog() == DialogResult.OK)
+                    {
+                        txtCracha.Text = String.Empty;
+                        txtNome.Text = String.Empty;
+                        txtSetor.Text = String.Empty;
+                        txtCargo.Text = String.Empty;
+                        radEntrada.Checked = false;
+                        radSaidaAlmoco.Checked = false;
+                        radRetornoAlmoco.Checked = false;
+                        radSaidaExpediente.Checked = false;
+                        listFuncionario.Items.Clear();
+                        geradorDeclaracao.declaracaoAntecipadaTudo(dados, salvar.FileName, titulo, momento.ToUpper(), data, horario);
+                        MessageBox.Show("Arquivo Salvo", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                txtCracha.Text = String.Empty;
+                txtNome.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+                radEntrada.Checked = false;
+                radSaidaAlmoco.Checked = false;
+                radRetornoAlmoco.Checked = false;
+                radSaidaExpediente.Checked = false;
+                listFuncionario.Items.Clear();
+                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void declaracaoSaida(string titulo)
+        {
+            try
+            {
+                if (txtNome.Text == String.Empty
+                    || txtCracha.Text == String.Empty
+                    || txtCargo.Text == String.Empty
+                    || txtSetor.Text == String.Empty
+                    )
+                {
+                    MessageBox.Show("Verifique se todos os dados foram preenchidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    momento = txtOutro.Text;
+                    data = Interaction.InputBox("Informe a data", "Informe");
+                    horario = Interaction.InputBox("Informe a hora", "Hora");
+
+                    if (data != "" && horario != "")
+                    {
+                        SaveFileDialog salvar = new SaveFileDialog();
+                        salvar.Filter = ".PDF | .pdf";
+                        salvar.FilterIndex = 2;
+                        salvar.FileName = "Arquivo";
+
+                        if (salvar.ShowDialog() == DialogResult.OK)
+                        {
+                            txtCracha.Text = String.Empty;
+                            txtNome.Text = String.Empty;
+                            txtSetor.Text = String.Empty;
+                            txtCargo.Text = String.Empty;
+                            listFuncionario.Items.Clear();
+                            radEntrada.Checked = false;
+                            radSaidaAlmoco.Checked = false;
+                            radRetornoAlmoco.Checked = false;
+                            radSaidaExpediente.Checked = false;
+                            geradorDeclaracao.declaracaoAntecipada(listaFuncionario, salvar.FileName, titulo, momento.ToUpper(), data, horario);
+                            MessageBox.Show("Arquivo Salvo", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                txtCracha.Text = String.Empty;
+                txtNome.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+                radEntrada.Checked = false;
+                radSaidaAlmoco.Checked = false;
+                radRetornoAlmoco.Checked = false;
+                radSaidaExpediente.Checked = false;
+                listFuncionario.Items.Clear();
+                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void declaracaoSaidaTudo(string titulo)
+        {
+            try
+            {
+                txtNome.Text = String.Empty;
+                txtCracha.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+
+                var dados = controlador.read();
+                momento = txtOutro.Text;
+                data = Interaction.InputBox("Informe a data", "Informe");
+                horario = Interaction.InputBox("Informe a hora", "Hora");
+
+                if (data != "" && horario != "")
+                {
+                    SaveFileDialog salvar = new SaveFileDialog();
+                    salvar.Filter = ".PDF | .pdf";
+                    salvar.FilterIndex = 2;
+                    salvar.FileName = "Arquivo";
+
+                    if (salvar.ShowDialog() == DialogResult.OK)
+                    {
+                        txtCracha.Text = String.Empty;
+                        txtNome.Text = String.Empty;
+                        txtSetor.Text = String.Empty;
+                        txtCargo.Text = String.Empty;
+                        radEntrada.Checked = false;
+                        radSaidaAlmoco.Checked = false;
+                        radRetornoAlmoco.Checked = false;
+                        radSaidaExpediente.Checked = false;
+                        listFuncionario.Items.Clear();
+                        geradorDeclaracao.declaracaoAntecipadaTudo(dados, salvar.FileName, titulo, momento.ToUpper(), data, horario);
+                        MessageBox.Show("Arquivo Salvo", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                txtCracha.Text = String.Empty;
+                txtNome.Text = String.Empty;
+                txtSetor.Text = String.Empty;
+                txtCargo.Text = String.Empty;
+                radEntrada.Checked = false;
+                radSaidaAlmoco.Checked = false;
+                radRetornoAlmoco.Checked = false;
+                radSaidaExpediente.Checked = false;
+                listFuncionario.Items.Clear();
+                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
     }
 }
