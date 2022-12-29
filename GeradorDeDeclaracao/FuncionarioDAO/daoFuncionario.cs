@@ -10,7 +10,6 @@ using Funcionario;
 using System.Data.Entity;
 using System.Security.Cryptography;
 
-
 namespace FuncionarioDAO
 {
     public class daoFuncionario

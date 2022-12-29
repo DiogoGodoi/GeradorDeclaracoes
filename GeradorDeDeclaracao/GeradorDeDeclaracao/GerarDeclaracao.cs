@@ -43,28 +43,36 @@ namespace GeradorDeDeclaracao
         }  
         private void btnAdcionar_Click(object sender, EventArgs e)
         {
-            cracha = Convert.ToInt32(txtCracha.Text);
-            nome = txtNome.Text;
-            setor = txtSetor.Text;
-            cargo = txtCargo.Text;
-
-            if (cracha.ToString() == String.Empty || nome == String.Empty || 
-                setor == String.Empty || cargo == String.Empty || data == String.Empty || horario == String.Empty)
-            {
-                MessageBox.Show("Verifique se todos os dados estão preenchidos", "Erro !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
+            try
             {
 
-                listaFuncionario.Add(new mdlFuncionario(cracha, nome, setor, cargo));
+                nome = txtNome.Text;
+                setor = txtSetor.Text;
+                cargo = txtCargo.Text;
+                cracha = Convert.ToInt32(txtCracha.Text);
 
-                foreach (var i in listaFuncionario)
+                if (cracha.ToString() == String.Empty || nome == String.Empty || 
+                    setor == String.Empty || cargo == String.Empty)
                 {
-                    item = new ListViewItem(i.getCracha().ToString());
-                    item.SubItems.Add(i.getNome());
+                    MessageBox.Show("Verifique se todos os dados estão preenchidos", "Erro !!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
 
-                listFuncionario.Items.Add(item);
+                    listaFuncionario.Add(new mdlFuncionario(cracha, nome, setor, cargo));
+
+                    foreach (var i in listaFuncionario)
+                    {
+                        item = new ListViewItem(i.getCracha().ToString());
+                        item.SubItems.Add(i.getNome());
+                    }
+
+                    listFuncionario.Items.Add(item);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Por favor insira os dados: "+ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnRemover_Click(object sender, EventArgs e)
@@ -75,32 +83,41 @@ namespace GeradorDeDeclaracao
         }
         private void btnGerar_Click_1(object sender, EventArgs e)
         {
-            if(controladorTelas.getTela() == "1")
+            if (listaFuncionario.Count != 0)
             {
-                declaracaoPonto();
-            }
-            else if (controladorTelas.getTela() == "2")
+                if (controladorTelas.getTela() == "1")
+                {
+                    declaracaoPonto();
+                }
+                else if (controladorTelas.getTela() == "2")
+                {
+                    declaracaoAviso("AVISO ANTECIPADO");
+                }
+                else if (controladorTelas.getTela() == "3")
+                {
+                    declaracaoSaida("SAÍDA ANTECIPADA");
+                }
+            }else
             {
-                declaracaoAviso("AVISO ANTECIPADO");
-            }else if (controladorTelas.getTela() == "3")
-            {
-                declaracaoSaida("SAÍDA ANTECIPADA");
+                MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnGerarTudo_Click(object sender, EventArgs e)
         {
-            if (controladorTelas.getTela() == "1")
-            {
-                declaracaoPontoTudo();
-            }
-            else if (controladorTelas.getTela() == "2")
-            {
-                declaracaoAvisoTudo("AVISO ANTECIPADO");
-            }
-            else if (controladorTelas.getTela() == "3")
-            {
-                declaracaoSaidaTudo("SAÍDA ANTECIPADA");
-            }
+            
+                if (controladorTelas.getTela() == "1")
+                {
+                    declaracaoPontoTudo();
+                }
+                else if (controladorTelas.getTela() == "2")
+                {
+                    declaracaoAvisoTudo("AVISO ANTECIPADO");
+                }
+                else if (controladorTelas.getTela() == "3")
+                {
+                    declaracaoSaidaTudo("SAÍDA ANTECIPADA");
+                }
+            
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -134,6 +151,16 @@ namespace GeradorDeDeclaracao
             this.WindowState = FormWindowState.Maximized;
             var dados = controlador.read();
             dtFuncionarios.DataSource = dados;
+
+            if(controladorTelas.getTela() == "2" || controladorTelas.getTela() == "3")
+            {
+                radEntrada.Enabled = false;
+                radSaidaAlmoco.Enabled = false;
+                radRetornoAlmoco.Enabled = false;
+                radSaidaExpediente.Enabled = false;
+                radOutro.Checked = true;
+            }
+
         }
         private void dtFuncionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
