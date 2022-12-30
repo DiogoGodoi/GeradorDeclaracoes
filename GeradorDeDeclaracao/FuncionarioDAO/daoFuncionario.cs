@@ -36,7 +36,7 @@ namespace FuncionarioDAO
         }
         public static DataTable insert(mdlFuncionario funcionario)
         {
-            string acessDB = @"Persist Security Info=False; server=localhost;database=declaracoes;uid=root;pwd=T21nfr@--";
+            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--";
             MySqlConnection conn = new MySqlConnection(acessDB);
             try
             {
@@ -70,7 +70,7 @@ namespace FuncionarioDAO
         public static bool alter(mdlFuncionario funcionario)
         {
 
-            string acessDB = @"Persist Security Info=False; server=localhost;database=declaracoes;uid=root;pwd=T21nfr@--";
+            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
             MySqlConnection conn = new MySqlConnection(acessDB);
            
                     conn.Open();
@@ -89,7 +89,7 @@ namespace FuncionarioDAO
         }
         public static DataTable read()
         {
-            string acessDB = @"Persist Security Info=False; server=localhost;database=declaracoes;uid=root;pwd=T21nfr@--";
+            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--";
             MySqlConnection conn = new MySqlConnection(acessDB);
             try
             {
@@ -127,7 +127,7 @@ namespace FuncionarioDAO
         }
         public static bool delete(string pNome)
         {
-            string acessDB = @"Persist Security Info=False; server=localhost;database=declaracoes;uid=root;pwd=T21nfr@--";
+            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
             MySqlConnection conn = new MySqlConnection(acessDB);
             try
             {
@@ -153,7 +153,7 @@ namespace FuncionarioDAO
         public static bool search(int pCracha)
         {
 
-            string acessDB = @"Persist Security Info=False; server=localhost;database=declaracoes;uid=root;pwd=T21nfr@--";
+            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
             MySqlConnection conn = new MySqlConnection(acessDB);
             try
             {
@@ -194,7 +194,7 @@ namespace FuncionarioDAO
         }
         public static DataTable searchName(string pNome)
         {
-            string acessDB = @"Persist Security Info=False; server=localhost;database=declaracoes;uid=root;pwd=T21nfr@--";
+            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
             MySqlConnection conn = new MySqlConnection(acessDB);
             try
             {
