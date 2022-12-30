@@ -372,5 +372,9 @@ namespace GeradorDeDeclaracao
 
 
         }
+        private void frmAlterar_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

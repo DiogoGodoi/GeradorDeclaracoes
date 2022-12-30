@@ -110,7 +110,7 @@
             // 
             this.grpTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpTitulo.Controls.Add(this.lblTitulo);
-            this.grpTitulo.Location = new System.Drawing.Point(-9, 12);
+            this.grpTitulo.Location = new System.Drawing.Point(12, 12);
             this.grpTitulo.Name = "grpTitulo";
             this.grpTitulo.Size = new System.Drawing.Size(752, 62);
             this.grpTitulo.TabIndex = 11;
@@ -130,6 +130,7 @@
             // 
             // lblCracha
             // 
+            this.lblCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCracha.AutoSize = true;
             this.lblCracha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCracha.ForeColor = System.Drawing.Color.Navy;
@@ -141,6 +142,7 @@
             // 
             // lblNome
             // 
+            this.lblNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.Navy;
@@ -152,6 +154,7 @@
             // 
             // grpConteudo
             // 
+            this.grpConteudo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpConteudo.Controls.Add(this.btnVoltar);
             this.grpConteudo.Controls.Add(this.btnCadastrar);
             this.grpConteudo.Controls.Add(this.txtCargo);
@@ -206,6 +209,7 @@
             // 
             // txtCargo
             // 
+            this.txtCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCargo.Enabled = false;
             this.txtCargo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCargo.Location = new System.Drawing.Point(279, 55);
@@ -215,6 +219,7 @@
             // 
             // txtSetor
             // 
+            this.txtSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSetor.Enabled = false;
             this.txtSetor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSetor.Location = new System.Drawing.Point(74, 55);
@@ -224,6 +229,7 @@
             // 
             // lblSetor
             // 
+            this.lblSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSetor.AutoSize = true;
             this.lblSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetor.ForeColor = System.Drawing.Color.Navy;
@@ -235,6 +241,7 @@
             // 
             // lblCargo
             // 
+            this.lblCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.Navy;
@@ -246,6 +253,7 @@
             // 
             // grpCargo
             // 
+            this.grpCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpCargo.Controls.Add(this.radTornMec);
             this.grpCargo.Controls.Add(this.radTecSeg);
             this.grpCargo.Controls.Add(this.radServGerais);
@@ -293,6 +301,7 @@
             // 
             // radTornMec
             // 
+            this.radTornMec.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radTornMec.AutoSize = true;
             this.radTornMec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radTornMec.Location = new System.Drawing.Point(383, 161);
@@ -306,6 +315,7 @@
             // 
             // radTecSeg
             // 
+            this.radTecSeg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radTecSeg.AutoSize = true;
             this.radTecSeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radTecSeg.Location = new System.Drawing.Point(383, 135);
@@ -319,6 +329,7 @@
             // 
             // radServGerais
             // 
+            this.radServGerais.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radServGerais.AutoSize = true;
             this.radServGerais.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radServGerais.Location = new System.Drawing.Point(383, 109);
@@ -332,6 +343,7 @@
             // 
             // radOpSoldaMig
             // 
+            this.radOpSoldaMig.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radOpSoldaMig.AutoSize = true;
             this.radOpSoldaMig.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radOpSoldaMig.Location = new System.Drawing.Point(383, 83);
@@ -345,6 +357,7 @@
             // 
             // radOpEmpilhadeira
             // 
+            this.radOpEmpilhadeira.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radOpEmpilhadeira.AutoSize = true;
             this.radOpEmpilhadeira.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radOpEmpilhadeira.Location = new System.Drawing.Point(383, 57);
@@ -358,6 +371,7 @@
             // 
             // radOpProdIII
             // 
+            this.radOpProdIII.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radOpProdIII.AutoSize = true;
             this.radOpProdIII.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radOpProdIII.Location = new System.Drawing.Point(383, 31);
@@ -371,6 +385,7 @@
             // 
             // radOpProdII
             // 
+            this.radOpProdII.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radOpProdII.AutoSize = true;
             this.radOpProdII.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radOpProdII.Location = new System.Drawing.Point(271, 259);
@@ -384,6 +399,7 @@
             // 
             // radOpProdI
             // 
+            this.radOpProdI.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radOpProdI.AutoSize = true;
             this.radOpProdI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radOpProdI.Location = new System.Drawing.Point(271, 161);
@@ -397,6 +413,7 @@
             // 
             // radMotorista
             // 
+            this.radMotorista.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radMotorista.AutoSize = true;
             this.radMotorista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radMotorista.Location = new System.Drawing.Point(271, 210);
@@ -410,6 +427,7 @@
             // 
             // radMecSoldador
             // 
+            this.radMecSoldador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radMecSoldador.AutoSize = true;
             this.radMecSoldador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radMecSoldador.Location = new System.Drawing.Point(271, 187);
@@ -423,6 +441,7 @@
             // 
             // radMecMan
             // 
+            this.radMecMan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radMecMan.AutoSize = true;
             this.radMecMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radMecMan.Location = new System.Drawing.Point(271, 233);
@@ -436,6 +455,7 @@
             // 
             // radLiderProdII
             // 
+            this.radLiderProdII.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radLiderProdII.AutoSize = true;
             this.radLiderProdII.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLiderProdII.Location = new System.Drawing.Point(271, 135);
@@ -449,6 +469,7 @@
             // 
             // radLiderProdI
             // 
+            this.radLiderProdI.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radLiderProdI.AutoSize = true;
             this.radLiderProdI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLiderProdI.Location = new System.Drawing.Point(271, 109);
@@ -462,6 +483,7 @@
             // 
             // radJardineiro
             // 
+            this.radJardineiro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radJardineiro.AutoSize = true;
             this.radJardineiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radJardineiro.Location = new System.Drawing.Point(271, 83);
@@ -475,6 +497,7 @@
             // 
             // radInspetQualid
             // 
+            this.radInspetQualid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radInspetQualid.AutoSize = true;
             this.radInspetQualid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radInspetQualid.Location = new System.Drawing.Point(271, 57);
@@ -488,6 +511,7 @@
             // 
             // radGerProd
             // 
+            this.radGerProd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radGerProd.AutoSize = true;
             this.radGerProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radGerProd.Location = new System.Drawing.Point(271, 31);
@@ -501,6 +525,7 @@
             // 
             // radEncarProdII
             // 
+            this.radEncarProdII.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radEncarProdII.AutoSize = true;
             this.radEncarProdII.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radEncarProdII.Location = new System.Drawing.Point(144, 259);
@@ -514,6 +539,7 @@
             // 
             // radEncarProdI
             // 
+            this.radEncarProdI.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radEncarProdI.AutoSize = true;
             this.radEncarProdI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radEncarProdI.Location = new System.Drawing.Point(144, 236);
@@ -527,6 +553,7 @@
             // 
             // radElectMec
             // 
+            this.radElectMec.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radElectMec.AutoSize = true;
             this.radElectMec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radElectMec.Location = new System.Drawing.Point(144, 210);
@@ -540,6 +567,7 @@
             // 
             // radCordRH
             // 
+            this.radCordRH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radCordRH.AutoSize = true;
             this.radCordRH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radCordRH.Location = new System.Drawing.Point(144, 187);
@@ -553,6 +581,7 @@
             // 
             // radAuxMec
             // 
+            this.radAuxMec.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAuxMec.AutoSize = true;
             this.radAuxMec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAuxMec.Location = new System.Drawing.Point(144, 161);
@@ -566,6 +595,7 @@
             // 
             // radAuxLimpeza
             // 
+            this.radAuxLimpeza.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAuxLimpeza.AutoSize = true;
             this.radAuxLimpeza.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAuxLimpeza.Location = new System.Drawing.Point(144, 135);
@@ -579,6 +609,7 @@
             // 
             // radAuxExp
             // 
+            this.radAuxExp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAuxExp.AutoSize = true;
             this.radAuxExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAuxExp.Location = new System.Drawing.Point(144, 109);
@@ -592,6 +623,7 @@
             // 
             // radAssistRecFiscal
             // 
+            this.radAssistRecFiscal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAssistRecFiscal.AutoSize = true;
             this.radAssistRecFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAssistRecFiscal.Location = new System.Drawing.Point(144, 83);
@@ -605,6 +637,7 @@
             // 
             // radAssistFiscal
             // 
+            this.radAssistFiscal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAssistFiscal.AutoSize = true;
             this.radAssistFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAssistFiscal.Location = new System.Drawing.Point(144, 57);
@@ -618,6 +651,7 @@
             // 
             // radAssistTi
             // 
+            this.radAssistTi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAssistTi.AutoSize = true;
             this.radAssistTi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAssistTi.Location = new System.Drawing.Point(144, 31);
@@ -631,6 +665,7 @@
             // 
             // radAssistExp
             // 
+            this.radAssistExp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAssistExp.AutoSize = true;
             this.radAssistExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAssistExp.Location = new System.Drawing.Point(20, 259);
@@ -644,6 +679,7 @@
             // 
             // radAssistComer
             // 
+            this.radAssistComer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAssistComer.AutoSize = true;
             this.radAssistComer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAssistComer.Location = new System.Drawing.Point(20, 236);
@@ -657,6 +693,7 @@
             // 
             // radAssisLog
             // 
+            this.radAssisLog.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAssisLog.AutoSize = true;
             this.radAssisLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAssisLog.Location = new System.Drawing.Point(20, 210);
@@ -670,6 +707,7 @@
             // 
             // radAprendizMec
             // 
+            this.radAprendizMec.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAprendizMec.AutoSize = true;
             this.radAprendizMec.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAprendizMec.Location = new System.Drawing.Point(20, 187);
@@ -683,6 +721,7 @@
             // 
             // radApontador
             // 
+            this.radApontador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radApontador.AutoSize = true;
             this.radApontador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radApontador.Location = new System.Drawing.Point(20, 161);
@@ -696,6 +735,7 @@
             // 
             // radAdsFinanceiro
             // 
+            this.radAdsFinanceiro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAdsFinanceiro.AutoSize = true;
             this.radAdsFinanceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAdsFinanceiro.Location = new System.Drawing.Point(20, 135);
@@ -709,6 +749,7 @@
             // 
             // radAdsLogistica
             // 
+            this.radAdsLogistica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAdsLogistica.AutoSize = true;
             this.radAdsLogistica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAdsLogistica.Location = new System.Drawing.Point(20, 109);
@@ -722,6 +763,7 @@
             // 
             // radAdsComercial
             // 
+            this.radAdsComercial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAdsComercial.AutoSize = true;
             this.radAdsComercial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAdsComercial.Location = new System.Drawing.Point(20, 83);
@@ -735,6 +777,7 @@
             // 
             // radAlmoxarife
             // 
+            this.radAlmoxarife.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAlmoxarife.AutoSize = true;
             this.radAlmoxarife.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAlmoxarife.Location = new System.Drawing.Point(20, 57);
@@ -748,6 +791,7 @@
             // 
             // radAjMotorista
             // 
+            this.radAjMotorista.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAjMotorista.AutoSize = true;
             this.radAjMotorista.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAjMotorista.Location = new System.Drawing.Point(20, 31);
@@ -761,6 +805,7 @@
             // 
             // grpSetor
             // 
+            this.grpSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpSetor.Controls.Add(this.radTI);
             this.grpSetor.Controls.Add(this.radSolda);
             this.grpSetor.Controls.Add(this.radSegTrab);
@@ -792,6 +837,7 @@
             // 
             // radTI
             // 
+            this.radTI.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radTI.AutoSize = true;
             this.radTI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radTI.Location = new System.Drawing.Point(104, 262);
@@ -805,6 +851,7 @@
             // 
             // radSolda
             // 
+            this.radSolda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSolda.AutoSize = true;
             this.radSolda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSolda.Location = new System.Drawing.Point(104, 236);
@@ -818,6 +865,7 @@
             // 
             // radSegTrab
             // 
+            this.radSegTrab.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radSegTrab.AutoSize = true;
             this.radSegTrab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSegTrab.Location = new System.Drawing.Point(104, 213);
@@ -831,6 +879,7 @@
             // 
             // radRh
             // 
+            this.radRh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radRh.AutoSize = true;
             this.radRh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radRh.Location = new System.Drawing.Point(104, 187);
@@ -844,6 +893,7 @@
             // 
             // radQualidade
             // 
+            this.radQualidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radQualidade.AutoSize = true;
             this.radQualidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radQualidade.Location = new System.Drawing.Point(104, 161);
@@ -857,6 +907,7 @@
             // 
             // radProducao
             // 
+            this.radProducao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radProducao.AutoSize = true;
             this.radProducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radProducao.Location = new System.Drawing.Point(104, 135);
@@ -870,6 +921,7 @@
             // 
             // radOxicorte
             // 
+            this.radOxicorte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radOxicorte.AutoSize = true;
             this.radOxicorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radOxicorte.Location = new System.Drawing.Point(104, 109);
@@ -883,6 +935,7 @@
             // 
             // radManutencao
             // 
+            this.radManutencao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radManutencao.AutoSize = true;
             this.radManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radManutencao.Location = new System.Drawing.Point(104, 83);
@@ -896,6 +949,7 @@
             // 
             // radLogisitica
             // 
+            this.radLogisitica.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radLogisitica.AutoSize = true;
             this.radLogisitica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLogisitica.Location = new System.Drawing.Point(104, 57);
@@ -909,6 +963,7 @@
             // 
             // radLixadeira
             // 
+            this.radLixadeira.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radLixadeira.AutoSize = true;
             this.radLixadeira.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLixadeira.Location = new System.Drawing.Point(104, 31);
@@ -922,6 +977,7 @@
             // 
             // radLamincacao
             // 
+            this.radLamincacao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radLamincacao.AutoSize = true;
             this.radLamincacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLamincacao.Location = new System.Drawing.Point(6, 262);
@@ -935,6 +991,7 @@
             // 
             // radHigiene
             // 
+            this.radHigiene.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radHigiene.AutoSize = true;
             this.radHigiene.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radHigiene.Location = new System.Drawing.Point(6, 236);
@@ -948,6 +1005,7 @@
             // 
             // radForjaria
             // 
+            this.radForjaria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radForjaria.AutoSize = true;
             this.radForjaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radForjaria.Location = new System.Drawing.Point(6, 213);
@@ -961,6 +1019,7 @@
             // 
             // radFiscal
             // 
+            this.radFiscal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radFiscal.AutoSize = true;
             this.radFiscal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radFiscal.Location = new System.Drawing.Point(6, 187);
@@ -974,6 +1033,7 @@
             // 
             // radFinanceiro
             // 
+            this.radFinanceiro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radFinanceiro.AutoSize = true;
             this.radFinanceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radFinanceiro.Location = new System.Drawing.Point(6, 161);
@@ -987,6 +1047,7 @@
             // 
             // radExpedicao
             // 
+            this.radExpedicao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radExpedicao.AutoSize = true;
             this.radExpedicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radExpedicao.Location = new System.Drawing.Point(6, 135);
@@ -1000,6 +1061,7 @@
             // 
             // radEstamparia
             // 
+            this.radEstamparia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radEstamparia.AutoSize = true;
             this.radEstamparia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radEstamparia.Location = new System.Drawing.Point(6, 109);
@@ -1013,6 +1075,7 @@
             // 
             // radComercial
             // 
+            this.radComercial.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radComercial.AutoSize = true;
             this.radComercial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radComercial.Location = new System.Drawing.Point(6, 83);
@@ -1026,6 +1089,7 @@
             // 
             // radAcab
             // 
+            this.radAcab.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAcab.AutoSize = true;
             this.radAcab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAcab.Location = new System.Drawing.Point(6, 57);
@@ -1039,6 +1103,7 @@
             // 
             // radAlmox
             // 
+            this.radAlmox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radAlmox.AutoSize = true;
             this.radAlmox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radAlmox.Location = new System.Drawing.Point(6, 31);
@@ -1052,6 +1117,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNome.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(279, 28);
             this.txtNome.Name = "txtNome";
@@ -1060,6 +1126,7 @@
             // 
             // txtCracha
             // 
+            this.txtCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCracha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCracha.Location = new System.Drawing.Point(74, 28);
             this.txtCracha.Name = "txtCracha";
@@ -1076,6 +1143,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastrar";
             this.Text = "Tela Cadastrar";
+            this.Load += new System.EventHandler(this.frmCadastrar_Load);
             this.grpTitulo.ResumeLayout(false);
             this.grpTitulo.PerformLayout();
             this.grpConteudo.ResumeLayout(false);

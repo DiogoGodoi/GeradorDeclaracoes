@@ -354,6 +354,10 @@ namespace GeradorDeDeclaracao
             }
 
         }
+        private void frmCadastrar_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 
 }

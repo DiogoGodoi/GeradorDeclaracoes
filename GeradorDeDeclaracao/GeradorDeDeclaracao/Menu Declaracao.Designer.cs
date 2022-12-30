@@ -74,6 +74,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.lblTitulo);
             this.groupBox1.Location = new System.Drawing.Point(50, 29);
             this.groupBox1.Name = "groupBox1";
@@ -83,6 +84,7 @@
             // 
             // lblTitulo
             // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Navy;

@@ -45,7 +45,6 @@ namespace GeradorDeDeclaracao
         {
             try
             {
-
                 nome = txtNome.Text;
                 setor = txtSetor.Text;
                 cargo = txtCargo.Text;
@@ -63,8 +62,7 @@ namespace GeradorDeDeclaracao
 
                     foreach (var i in listaFuncionario)
                     {
-                        item = new ListViewItem(i.getCracha().ToString());
-                        item.SubItems.Add(i.getNome());
+                        item = new ListViewItem(i.getNome());
                     }
 
                     listFuncionario.Items.Add(item);
@@ -72,7 +70,7 @@ namespace GeradorDeDeclaracao
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Por favor insira os dados: "+ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Por favor selecione o funcionário antes de adcionar a lista", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnRemover_Click(object sender, EventArgs e)
@@ -83,7 +81,16 @@ namespace GeradorDeDeclaracao
         }
         private void btnGerar_Click_1(object sender, EventArgs e)
         {
-            if (listaFuncionario.Count != 0)
+            if (listaFuncionario.Count == 0)
+            {
+                MessageBox.Show("Funcionário não adcionado a lista de funcionários", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txtOutro.Text == "" && radEntrada.Checked == false && radSaidaAlmoco.Checked == false
+                && radRetornoAlmoco.Checked == false && radSaidaExpediente.Checked == false)
+            {
+                MessageBox.Show("Por favor informe o motivo da declaração", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
             {
                 if (controladorTelas.getTela() == "1")
                 {
@@ -97,14 +104,13 @@ namespace GeradorDeDeclaracao
                 {
                     declaracaoSaida("SAÍDA ANTECIPADA");
                 }
-            }else
-            {
-                MessageBox.Show("Por favor insira os dados", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnGerarTudo_Click(object sender, EventArgs e)
         {
-            
+            if (txtOutro.Text != "" || radEntrada.Checked != false || radSaidaAlmoco.Checked != false 
+                || radRetornoAlmoco.Checked != false || radSaidaExpediente.Checked != false)
+            {
                 if (controladorTelas.getTela() == "1")
                 {
                     declaracaoPontoTudo();
@@ -117,6 +123,11 @@ namespace GeradorDeDeclaracao
                 {
                     declaracaoSaidaTudo("SAÍDA ANTECIPADA");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Por favor insira o motivo da declaração", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
         }
         private void btnVoltar_Click(object sender, EventArgs e)
