@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationRevision>20</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -180,6 +180,10 @@
     <ProjectReference Include="..\ControladorTelas\ControladorTelas.csproj">
       <Project>{c3f89b76-7c0c-441e-af2f-47829dcd6b5d}</Project>
       <Name>ControladorTelas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\controladorUsuario\Usuario.csproj">
+      <Project>{bd1616b0-1776-40f0-a965-853eaedad354}</Project>
+      <Name>Usuario</Name>
     </ProjectReference>
     <ProjectReference Include="..\Controlador\Controlador.csproj">
       <Project>{da1fe635-9e22-4bba-8950-8957b5751335}</Project>

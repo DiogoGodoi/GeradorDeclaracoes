@@ -16,6 +16,8 @@ namespace controladorDeclaracao
     public class geradorDeclaracao
     {
         private static string logo = @"C:\Program Files\gerador de declarações\img\logo.png";
+        private static DateTime dt =  DateTime.Now;
+        private static string dataFormat = String.Format("{0:dd/MM/yyyy}", dt);
         public static void declaracaoPonto(List<mdlFuncionario> listMdlFuncionario, string caminho, string momento, string dia, string horario)
         {
             Document document = new Document(PageSize.A4);
@@ -40,11 +42,11 @@ namespace controladorDeclaracao
                 cabecalho.Alignment = Element.ALIGN_CENTER;
                 cabecalho.Add("JUSTIFICATIVA DE NÃO REGISTRO DE PONTO");
 
-                Paragraph marginBottom = new Paragraph();
-                marginBottom.Add(new Paragraph(" "));
-                document.Add(marginBottom);
+                Paragraph marginContent = new Paragraph();
+                marginContent.Add(new Paragraph(" "));
+                document.Add(marginContent);
 
-                Paragraph conteudoFuncionario = new Paragraph();
+                Paragraph conteudoFuncionario = new Paragraph("", fonte);
                 conteudoFuncionario.Alignment = Element.ALIGN_CENTER;
                 conteudoFuncionario.Add($"NOME: {idx.getNome()}\r\nMATRICULA: {idx.getCracha()}\r\n");
 
@@ -68,7 +70,7 @@ namespace controladorDeclaracao
                 espacamento3.Add(new Paragraph(" "));
                 document.Add(espacamento3);
 
-                Paragraph conteudo = new Paragraph("");
+                Paragraph conteudo = new Paragraph("", fonte);
                 conteudo.Alignment = Element.ALIGN_CENTER;
                 conteudo.Add($"NÃO REGISTROU O PONTO {momento} DIA {dia}. \r\nHORÁRIO INFORMADO {horario} PARA REGISTRO MANUAL.");
                 document.Add(conteudo);
@@ -77,20 +79,28 @@ namespace controladorDeclaracao
                 espacamento4.Add(new Paragraph(" "));
                 document.Add(espacamento4);
 
-                Paragraph conteudo2 = new Paragraph("");
+                Paragraph conteudo2 = new Paragraph("", fonte);
                 conteudo2.Alignment = Element.ALIGN_CENTER;
                 conteudo2.Add($"EU, {idx.getNome()} DECLARO VERACIDADE DAS INFORMAÇÕES ACIMA DESCRITAS");
                 document.Add(conteudo2);
 
-                Paragraph linha = new Paragraph("");
+                Paragraph marginContent2 = new Paragraph();
+                marginContent2.Add(new Paragraph(" "));
+                document.Add(marginContent2);
+
+                Paragraph linha = new Paragraph("", fonte);
                 linha.Alignment = Element.ALIGN_CENTER;
                 linha.Add("__________________________      __________________________\r\nAssinatura do Solicitante                " +
                     "        Assinatura do RH");
-
-                Paragraph marginBottom2 = new Paragraph();
-                marginBottom2.Add(new Paragraph(" "));
-                document.Add(marginBottom2);
                 document.Add(linha);
+
+                Paragraph marginBottom = new Paragraph();
+                marginBottom.Add(new Paragraph(" "));
+                document.Add(marginBottom);
+
+                Paragraph rodape = new Paragraph($"Data de emissão: {dataFormat}", fonte);
+                rodape.Alignment = Element.ALIGN_CENTER;
+                document.Add(rodape);
             }
                 document.Close();
 
@@ -109,8 +119,7 @@ namespace controladorDeclaracao
             for (var i = 0; i < dados.Rows.Count; i++) {
 
 
-                Paragraph marginTop = new Paragraph();
-                marginTop.Add(new Paragraph(" "));
+                Paragraph marginTop = new Paragraph("");
                 document.Add(marginTop);
 
                 string nome = dados.Rows[i]["nome"].ToString();
@@ -129,7 +138,7 @@ namespace controladorDeclaracao
                 cabecalho.Alignment = Element.ALIGN_CENTER;
                 cabecalho.Add("JUSTIFICATIVA DE NÃO REGISTRO DE PONTO");
 
-                Paragraph conteudoFuncionario = new Paragraph("");
+                Paragraph conteudoFuncionario = new Paragraph("", fonte);
                 conteudoFuncionario.Alignment = Element.ALIGN_CENTER;
                 conteudoFuncionario.Add($"NOME: {nome}\r\nMATRICULA: {cracha}\r\n");
 
@@ -153,7 +162,7 @@ namespace controladorDeclaracao
                 espacamento3.Add(new Paragraph(" "));
                 document.Add(espacamento3);
 
-                Paragraph conteudo = new Paragraph("");
+                Paragraph conteudo = new Paragraph("", fonte);
                 conteudo.Alignment = Element.ALIGN_CENTER;
                 conteudo.Add($"NÃO REGISTROU O PONTO {momento} DIA {dia}. \r\nHORÁRIO INFORMADO {horario} PARA REGISTRO MANUAL.");
                 document.Add(conteudo);
@@ -162,20 +171,24 @@ namespace controladorDeclaracao
                 espacamento4.Add(new Paragraph(" "));
                 document.Add(espacamento4);
 
-                Paragraph conteudo2 = new Paragraph("");
+                Paragraph conteudo2 = new Paragraph("", fonte);
                 conteudo2.Alignment = Element.ALIGN_CENTER;
                 conteudo2.Add($"EU, {nome} DECLARO VERACIDADE DAS INFORMAÇÕES ACIMA DESCRITAS");
                 document.Add(conteudo2);
 
-                Paragraph linha = new Paragraph("");
+                Paragraph linha = new Paragraph("", fonte);
                 linha.Alignment = Element.ALIGN_CENTER;
                 linha.Add("__________________________      __________________________\r\nAssinatura do Solicitante                " +
                     "        Assinatura do RH");
+                document.Add(linha);
 
                 Paragraph marginBottom = new Paragraph();
                 marginBottom.Add(new Paragraph(" "));
                 document.Add(marginBottom);
-                document.Add(linha);
+
+                Paragraph rodape = new Paragraph($"Data de emissão: {dataFormat}", fonte);
+                rodape.Alignment = Element.ALIGN_CENTER;
+                document.Add(rodape);
             }
             document.Close();
 
@@ -204,11 +217,11 @@ namespace controladorDeclaracao
                 cabecalho.Alignment = Element.ALIGN_CENTER;
                 cabecalho.Add(titulo);
 
-                Paragraph marginBottom = new Paragraph();
-                marginBottom.Add(new Paragraph(" "));
-                document.Add(marginBottom);
+                Paragraph marginContent = new Paragraph();
+                marginContent.Add(new Paragraph(" "));
+                document.Add(marginContent);
 
-                Paragraph conteudoFuncionario = new Paragraph();
+                Paragraph conteudoFuncionario = new Paragraph("", fonte);
                 conteudoFuncionario.Alignment = Element.ALIGN_CENTER;
                 conteudoFuncionario.Add($"NOME: {idx.getNome()}\r\nMATRICULA: {idx.getCracha()}\r\n");
 
@@ -232,7 +245,7 @@ namespace controladorDeclaracao
                 espacamento3.Add(new Paragraph(" "));
                 document.Add(espacamento3);
 
-                Paragraph conteudo = new Paragraph("");
+                Paragraph conteudo = new Paragraph("", fonte);
                 conteudo.Alignment = Element.ALIGN_CENTER;
                 conteudo.Add($"{momento} DIA {dia} às {horario} HORAS.");
                 document.Add(conteudo);
@@ -241,20 +254,24 @@ namespace controladorDeclaracao
                 espacamento4.Add(new Paragraph(" "));
                 document.Add(espacamento4);
 
-                Paragraph conteudo2 = new Paragraph("");
+                Paragraph conteudo2 = new Paragraph("", fonte);
                 conteudo2.Alignment = Element.ALIGN_CENTER;
                 conteudo2.Add($"EU, {idx.getNome()} DECLARO VERACIDADE DAS INFORMAÇÕES ACIMA DESCRITAS");
                 document.Add(conteudo2);
 
-                Paragraph linha = new Paragraph("");
+                Paragraph linha = new Paragraph("", fonte);
                 linha.Alignment = Element.ALIGN_CENTER;
                 linha.Add("__________________________      __________________________\r\nAssinatura do Solicitante                " +
                     "        Assinatura do RH");
-
-                Paragraph marginBottom2 = new Paragraph();
-                marginBottom2.Add(new Paragraph(" "));
-                document.Add(marginBottom2);
                 document.Add(linha);
+
+                Paragraph marginBottom = new Paragraph();
+                marginBottom.Add(new Paragraph(" "));
+                document.Add(marginBottom);
+
+                Paragraph rodape = new Paragraph($"Data de emissão: {dataFormat}", fonte);
+                rodape.Alignment = Element.ALIGN_CENTER;
+                document.Add(rodape);
             }
             document.Close();
 
@@ -266,28 +283,24 @@ namespace controladorDeclaracao
             document.AddCreationDate();
             PdfWriter escrever = PdfWriter.GetInstance(document, new FileStream(caminho, FileMode.Create));
             Font fonte = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
-            document.Open();
 
             DataTable dados = tabela;
+
+            document.Open();
 
             for (var i = 0; i < dados.Rows.Count; i++)
             {
 
-
                 Paragraph marginTop = new Paragraph();
                 marginTop.Add(new Paragraph(" "));
                 document.Add(marginTop);
-
-                Paragraph marginTop2 = new Paragraph();
-                marginTop2.Add(new Paragraph(" "));
-                document.Add(marginTop2);
 
                 string nome = dados.Rows[i]["nome"].ToString();
                 string cracha = dados.Rows[i]["cracha"].ToString();
 
                 Image img = Image.GetInstance(logo);
                 img.Alignment = Element.ALIGN_CENTER;
-                img.ScaleToFit(150f, 150f);
+                img.ScaleToFit(130f, 130f);
                 document.Add(img);
 
                 Paragraph marginbottom = new Paragraph();
@@ -298,7 +311,7 @@ namespace controladorDeclaracao
                 cabecalho.Alignment = Element.ALIGN_CENTER;
                 cabecalho.Add(titulo);
 
-                Paragraph conteudoFuncionario = new Paragraph("");
+                Paragraph conteudoFuncionario = new Paragraph("", fonte);
                 conteudoFuncionario.Alignment = Element.ALIGN_CENTER;
                 conteudoFuncionario.Add($"NOME: {nome}\r\nMATRICULA: {cracha}\r\n");
 
@@ -322,7 +335,7 @@ namespace controladorDeclaracao
                 espacamento3.Add(new Paragraph(" "));
                 document.Add(espacamento3);
 
-                Paragraph conteudo = new Paragraph("");
+                Paragraph conteudo = new Paragraph("", fonte);
                 conteudo.Alignment = Element.ALIGN_CENTER;
                 conteudo.Add($"{momento} DIA {dia} às {horario} HORAS.");
                 document.Add(conteudo);
@@ -331,24 +344,29 @@ namespace controladorDeclaracao
                 espacamento4.Add(new Paragraph(" "));
                 document.Add(espacamento4);
 
-                Paragraph conteudo2 = new Paragraph("");
+                Paragraph conteudo2 = new Paragraph("", fonte);
                 conteudo2.Alignment = Element.ALIGN_CENTER;
                 conteudo2.Add($"EU, {nome} DECLARO VERACIDADE DAS INFORMAÇÕES ACIMA DESCRITAS");
                 document.Add(conteudo2);
 
-                Paragraph linha = new Paragraph("");
+                Paragraph linha = new Paragraph("", fonte);
                 linha.Alignment = Element.ALIGN_CENTER;
                 linha.Add("__________________________      __________________________\r\nAssinatura do Solicitante                " +
                     "        Assinatura do RH");
+                document.Add(linha);
 
                 Paragraph marginBottom = new Paragraph();
                 marginBottom.Add(new Paragraph(" "));
                 document.Add(marginBottom);
-                document.Add(linha);
+
+                Paragraph rodape = new Paragraph($"Data de emissão: {dataFormat}", fonte);
+                rodape.Alignment = Element.ALIGN_CENTER;
+                document.Add(rodape);
+
 
             }
             document.Close();
-
+            
         }
 
     }

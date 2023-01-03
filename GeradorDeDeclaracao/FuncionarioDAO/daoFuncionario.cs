@@ -18,6 +18,8 @@ namespace FuncionarioDAO
         private static string nome { get; set; }
         private static string setor { get; set; }
         private static string cargo { get; set; }
+        public static string user { get; set; }
+        public static string password { get; set; }
         public static int getCracha()
         {
             return cracha;
@@ -33,6 +35,14 @@ namespace FuncionarioDAO
         public static string getCargo()
         {
             return cargo;
+        }
+        public static string getUser()
+        {
+            return user;
+        }
+        public static string getPassword()
+        {
+            return password;
         }
         public static DataTable insert(mdlFuncionario funcionario)
         {
@@ -89,7 +99,9 @@ namespace FuncionarioDAO
         }
         public static DataTable read()
         {
-            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--";
+            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306;database=gerador;uid=root;pwd=T21nfr@--";
+            string acessDB2 = @"Persist Security Info=False;server=192.168.0.253;port=3306;database=gerador;uid="+getUser()+";pwd="+getPassword();
+
             MySqlConnection conn = new MySqlConnection(acessDB);
             try
             {

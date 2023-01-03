@@ -162,7 +162,7 @@ namespace GeradorDeDeclaracao
             this.WindowState = FormWindowState.Maximized;
             var dados = controlador.read();
             dtFuncionarios.DataSource = dados;
-
+            
             if(controladorTelas.getTela() == "2" || controladorTelas.getTela() == "3")
             {
                 radEntrada.Enabled = false;
@@ -516,6 +516,5 @@ namespace GeradorDeDeclaracao
                 MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
     }
 }

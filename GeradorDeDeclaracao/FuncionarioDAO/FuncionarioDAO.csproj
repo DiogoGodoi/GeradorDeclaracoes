@@ -106,6 +106,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\controladorUsuario\Usuario.csproj">
+      <Project>{bd1616b0-1776-40f0-a965-853eaedad354}</Project>
+      <Name>Usuario</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Funcionario\Funcionario.csproj">
       <Project>{fd01873d-101f-4092-b6e4-6e6ceb2021a3}</Project>
       <Name>Funcionario</Name>
