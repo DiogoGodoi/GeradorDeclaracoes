@@ -17,7 +17,13 @@ namespace GeradorDeDeclaracao
         {
             InitializeComponent();
         }
-
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Thread _thread = new Thread(abrirJanelaLogin);
+            _thread.SetApartmentState(ApartmentState.STA);
+            _thread.Start();
+            this.Close();
+        }
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             Thread _thread = new Thread(abrirJanelaCadastro);
@@ -42,9 +48,10 @@ namespace GeradorDeDeclaracao
             Application.Run(new frmMenuDeclaracao());
         }
 
-        private void pctMenuDeclaracao_Click(object sender, EventArgs e)
+        public void abrirJanelaLogin()
         {
-
+            Application.Run(new frmLogin());
         }
+
     }
 }

@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>20</ApplicationRevision>
+    <ApplicationRevision>21</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -86,6 +86,12 @@
     <Compile Include="GerarDeclaracao.Designer.cs">
       <DependentUpon>GerarDeclaracao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu Declaracao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GerarDeclaracao.resx">
       <DependentUpon>GerarDeclaracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Declaracao.resx">
       <DependentUpon>Menu Declaracao.cs</DependentUpon>
@@ -177,21 +186,33 @@
       <Project>{4004e588-a108-43ee-bea7-6e1a14867962}</Project>
       <Name>ControladorDeclaracao</Name>
     </ProjectReference>
+    <ProjectReference Include="..\controladorLogin\ControladorLogin.csproj">
+      <Project>{fc042272-7312-4a67-92a8-5127223673de}</Project>
+      <Name>ControladorLogin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ControladorTelas\ControladorTelas.csproj">
       <Project>{c3f89b76-7c0c-441e-af2f-47829dcd6b5d}</Project>
       <Name>ControladorTelas</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\controladorUsuario\Usuario.csproj">
-      <Project>{bd1616b0-1776-40f0-a965-853eaedad354}</Project>
-      <Name>Usuario</Name>
     </ProjectReference>
     <ProjectReference Include="..\Controlador\Controlador.csproj">
       <Project>{da1fe635-9e22-4bba-8950-8957b5751335}</Project>
       <Name>Controlador</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FuncionarioDAO\FuncionarioDAO.csproj">
+      <Project>{cf68212b-271a-4d4c-9052-d49009ab4599}</Project>
+      <Name>FuncionarioDAO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Funcionario\Funcionario.csproj">
       <Project>{fd01873d-101f-4092-b6e4-6e6ceb2021a3}</Project>
       <Name>Funcionario</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsuarioDAO\UsuarioDAO.csproj">
+      <Project>{093eec01-e004-43ce-9c9b-38ea575d6839}</Project>
+      <Name>UsuarioDAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Usuario\Usuario.csproj">
+      <Project>{922f740d-e1c2-443a-a6d9-df27edd3b966}</Project>
+      <Name>Usuario</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

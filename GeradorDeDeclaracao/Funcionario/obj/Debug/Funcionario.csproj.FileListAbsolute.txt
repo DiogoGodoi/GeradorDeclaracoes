@@ -4,3 +4,9 @@ C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcion
 C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcionario.csproj.CoreCompileInputs.cache
 C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcionario.dll
 C:\Users\infra\Desktop\Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcionario.pdb
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Funcionario\bin\Debug\Funcionario.dll
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Funcionario\bin\Debug\Funcionario.pdb
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcionario.csproj.AssemblyReference.cache
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcionario.csproj.CoreCompileInputs.cache
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcionario.dll
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Funcionario\obj\Debug\Funcionario.pdb

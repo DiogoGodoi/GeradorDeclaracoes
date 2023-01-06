@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using MySql.Data;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 using Funcionario;
 using System.Data.Entity;
 using System.Security.Cryptography;
+using UsuarioDAO;
 
 namespace FuncionarioDAO
 {
@@ -46,8 +47,15 @@ namespace FuncionarioDAO
         }
         public static DataTable insert(mdlFuncionario funcionario)
         {
-            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--";
-            MySqlConnection conn = new MySqlConnection(acessDB);
+            var db = new MySqlConnectionStringBuilder
+            {
+                Server = "192.168.0.253",
+                UserID = daoUsuario.getNome(),
+                Password = daoUsuario.getSenha(),
+                Database = "gerador",
+                Port = 3306,
+            };
+            MySqlConnection conn = new MySqlConnection(db.ConnectionString);
             try
             {
                     string query = "INSERT INTO Funcionario (cracha, nome, setor, cargo) VALUES (@cracha, @nome, @setor, @cargo)";
@@ -79,9 +87,16 @@ namespace FuncionarioDAO
         }
         public static bool alter(mdlFuncionario funcionario)
         {
+            var db = new MySqlConnectionStringBuilder
+            {
+                Server = "192.168.0.253",
+                UserID = daoUsuario.getNome(),
+                Password = daoUsuario.getSenha(),
+                Database = "gerador",
+                Port = 3306,
+            };
 
-            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
-            MySqlConnection conn = new MySqlConnection(acessDB);
+            MySqlConnection conn = new MySqlConnection(db.ConnectionString);
            
                     conn.Open();
                     string query = "UPDATE Funcionario SET cracha = @cracha, nome = @nome, setor = @setor, cargo = @cargo WHERE cracha LIKE @pCracha";
@@ -99,10 +114,16 @@ namespace FuncionarioDAO
         }
         public static DataTable read()
         {
-            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306;database=gerador;uid=root;pwd=T21nfr@--";
-            string acessDB2 = @"Persist Security Info=False;server=192.168.0.253;port=3306;database=gerador;uid="+getUser()+";pwd="+getPassword();
+            var db = new MySqlConnectionStringBuilder
+            {
+                Server = "192.168.0.253",
+                UserID = daoUsuario.getNome(),
+                Password = daoUsuario.getSenha(),
+                Database = "gerador",
+                Port = 3306,
+            };
 
-            MySqlConnection conn = new MySqlConnection(acessDB);
+            MySqlConnection conn = new MySqlConnection(db.ConnectionString);
             try
             {
                 conn.Open();
@@ -139,8 +160,16 @@ namespace FuncionarioDAO
         }
         public static bool delete(string pNome)
         {
-            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
-            MySqlConnection conn = new MySqlConnection(acessDB);
+            var db = new MySqlConnectionStringBuilder
+            {
+                Server = "192.168.0.253",
+                UserID = daoUsuario.getNome(),
+                Password = daoUsuario.getSenha(),
+                Database = "gerador",
+                Port = 3306,
+            };
+
+            MySqlConnection conn = new MySqlConnection(db.ConnectionString);
             try
             {
                     conn.Open();
@@ -164,9 +193,16 @@ namespace FuncionarioDAO
         }
         public static bool search(int pCracha)
         {
+            var db = new MySqlConnectionStringBuilder
+            {
+                Server = "192.168.0.253",
+                UserID = daoUsuario.getNome(),
+                Password = daoUsuario.getSenha(),
+                Database = "gerador",
+                Port = 3306,
+            };
 
-            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
-            MySqlConnection conn = new MySqlConnection(acessDB);
+            MySqlConnection conn = new MySqlConnection(db.ConnectionString);
             try
             {
                 conn.Open();
@@ -206,8 +242,17 @@ namespace FuncionarioDAO
         }
         public static DataTable searchName(string pNome)
         {
-            string acessDB = @"Persist Security Info=False;server=192.168.0.253;port=3306; database=gerador;uid=root;pwd=T21nfr@--"; ;
-            MySqlConnection conn = new MySqlConnection(acessDB);
+
+            var db = new MySqlConnectionStringBuilder
+            {
+                Server = "192.168.0.253",
+                UserID = "root",
+                Password = "T21nfr@--",
+                Database = "gerador",
+                Port = 3306,
+            };
+
+            MySqlConnection conn = new MySqlConnection(db.ConnectionString);
             try
             {
                 conn.Open();
