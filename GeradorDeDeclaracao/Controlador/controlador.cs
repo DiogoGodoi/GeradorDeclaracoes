@@ -35,7 +35,7 @@ namespace Controlador
         {
             return daoFuncionario.alter(funcionario);
         }
-        public static DataTable read()
+        public static List<mdlFuncionario> read()
         {
             return daoFuncionario.read();
         }
@@ -47,7 +47,7 @@ namespace Controlador
         {
             return daoFuncionario.search(cracha);
         }
-        public static DataTable searchName(string nome)
+        public static mdlFuncionario searchName(string nome)
         {
             return daoFuncionario.searchName(nome);
         }

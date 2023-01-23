@@ -32,11 +32,14 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.grpConteudo = new System.Windows.Forms.GroupBox();
             this.grpPesquisar = new System.Windows.Forms.GroupBox();
+            this.listViewFuncionarios = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblFuncionario = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtFuncionarios = new System.Windows.Forms.DataGridView();
             this.grpAdionar = new System.Windows.Forms.GroupBox();
+            this.lblLista = new System.Windows.Forms.Label();
             this.txtOutro = new System.Windows.Forms.TextBox();
             this.radOutro = new System.Windows.Forms.RadioButton();
             this.radRetornoAlmoco = new System.Windows.Forms.RadioButton();
@@ -60,11 +63,9 @@
             this.grpTitulo = new System.Windows.Forms.GroupBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnGerarTudo = new System.Windows.Forms.Button();
-            this.lblLista = new System.Windows.Forms.Label();
-            this.lblFuncionario = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpConteudo.SuspendLayout();
             this.grpPesquisar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFuncionarios)).BeginInit();
             this.grpAdionar.SuspendLayout();
             this.grpTitulo.SuspendLayout();
             this.SuspendLayout();
@@ -100,11 +101,11 @@
             // grpPesquisar
             // 
             this.grpPesquisar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grpPesquisar.Controls.Add(this.listViewFuncionarios);
             this.grpPesquisar.Controls.Add(this.lblFuncionario);
             this.grpPesquisar.Controls.Add(this.btnPesquisar);
             this.grpPesquisar.Controls.Add(this.txtPesquisa);
             this.grpPesquisar.Controls.Add(this.label3);
-            this.grpPesquisar.Controls.Add(this.dtFuncionarios);
             this.grpPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.grpPesquisar.Location = new System.Drawing.Point(529, 30);
@@ -113,6 +114,39 @@
             this.grpPesquisar.TabIndex = 47;
             this.grpPesquisar.TabStop = false;
             this.grpPesquisar.Text = "Pesquisar";
+            // 
+            // listViewFuncionarios
+            // 
+            this.listViewFuncionarios.BackColor = System.Drawing.Color.White;
+            this.listViewFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listViewFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2,
+            this.columnHeader1});
+            this.listViewFuncionarios.HideSelection = false;
+            this.listViewFuncionarios.Location = new System.Drawing.Point(24, 94);
+            this.listViewFuncionarios.Name = "listViewFuncionarios";
+            this.listViewFuncionarios.Size = new System.Drawing.Size(501, 403);
+            this.listViewFuncionarios.TabIndex = 65;
+            this.listViewFuncionarios.UseCompatibleStateImageBehavior = false;
+            this.listViewFuncionarios.View = System.Windows.Forms.View.Details;
+            this.listViewFuncionarios.SelectedIndexChanged += new System.EventHandler(this.listViewFuncionarios_SelectedIndexChanged);
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nome";
+            this.columnHeader2.Width = 405;
+            // 
+            // lblFuncionario
+            // 
+            this.lblFuncionario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFuncionario.AutoSize = true;
+            this.lblFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuncionario.ForeColor = System.Drawing.Color.Navy;
+            this.lblFuncionario.Location = new System.Drawing.Point(19, 62);
+            this.lblFuncionario.Name = "lblFuncionario";
+            this.lblFuncionario.Size = new System.Drawing.Size(92, 16);
+            this.lblFuncionario.TabIndex = 64;
+            this.lblFuncionario.Text = "Funcionario:";
             // 
             // btnPesquisar
             // 
@@ -152,17 +186,6 @@
             this.label3.TabIndex = 47;
             this.label3.Text = "Nome";
             // 
-            // dtFuncionarios
-            // 
-            this.dtFuncionarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtFuncionarios.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dtFuncionarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtFuncionarios.Location = new System.Drawing.Point(22, 81);
-            this.dtFuncionarios.Name = "dtFuncionarios";
-            this.dtFuncionarios.Size = new System.Drawing.Size(501, 387);
-            this.dtFuncionarios.TabIndex = 46;
-            this.dtFuncionarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtFuncionarios_CellContentClick);
-            // 
             // grpAdionar
             // 
             this.grpAdionar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -194,6 +217,18 @@
             this.grpAdionar.TabIndex = 46;
             this.grpAdionar.TabStop = false;
             this.grpAdionar.Text = "Adcionar";
+            // 
+            // lblLista
+            // 
+            this.lblLista.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLista.AutoSize = true;
+            this.lblLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLista.ForeColor = System.Drawing.Color.Navy;
+            this.lblLista.Location = new System.Drawing.Point(17, 211);
+            this.lblLista.Name = "lblLista";
+            this.lblLista.Size = new System.Drawing.Size(154, 16);
+            this.lblLista.TabIndex = 63;
+            this.lblLista.Text = "Lista de funcionários:";
             // 
             // txtOutro
             // 
@@ -489,29 +524,10 @@
             this.btnGerarTudo.UseVisualStyleBackColor = false;
             this.btnGerarTudo.Click += new System.EventHandler(this.btnGerarTudo_Click);
             // 
-            // lblLista
+            // columnHeader1
             // 
-            this.lblLista.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLista.AutoSize = true;
-            this.lblLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLista.ForeColor = System.Drawing.Color.Navy;
-            this.lblLista.Location = new System.Drawing.Point(17, 211);
-            this.lblLista.Name = "lblLista";
-            this.lblLista.Size = new System.Drawing.Size(154, 16);
-            this.lblLista.TabIndex = 63;
-            this.lblLista.Text = "Lista de funcionários:";
-            // 
-            // lblFuncionario
-            // 
-            this.lblFuncionario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFuncionario.AutoSize = true;
-            this.lblFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncionario.ForeColor = System.Drawing.Color.Navy;
-            this.lblFuncionario.Location = new System.Drawing.Point(19, 62);
-            this.lblFuncionario.Name = "lblFuncionario";
-            this.lblFuncionario.Size = new System.Drawing.Size(92, 16);
-            this.lblFuncionario.TabIndex = 64;
-            this.lblFuncionario.Text = "Funcionario:";
+            this.columnHeader1.Text = "Cracha";
+            this.columnHeader1.Width = 85;
             // 
             // frmGerarDeclacarao
             // 
@@ -529,7 +545,6 @@
             this.grpConteudo.ResumeLayout(false);
             this.grpPesquisar.ResumeLayout(false);
             this.grpPesquisar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFuncionarios)).EndInit();
             this.grpAdionar.ResumeLayout(false);
             this.grpAdionar.PerformLayout();
             this.grpTitulo.ResumeLayout(false);
@@ -549,7 +564,6 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dtFuncionarios;
         private System.Windows.Forms.GroupBox grpAdionar;
         private System.Windows.Forms.Label lblMotivo;
         private System.Windows.Forms.Label lblNome;
@@ -573,5 +587,8 @@
         private System.Windows.Forms.TextBox txtOutro;
         private System.Windows.Forms.Label lblLista;
         private System.Windows.Forms.Label lblFuncionario;
+        private System.Windows.Forms.ListView listViewFuncionarios;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

@@ -162,6 +162,7 @@
             this.Controls.Add(this.pictLogin);
             this.Controls.Add(this.grpLogar);
             this.Controls.Add(this.grpLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.Text = "Login";
             this.grpLogin.ResumeLayout(false);

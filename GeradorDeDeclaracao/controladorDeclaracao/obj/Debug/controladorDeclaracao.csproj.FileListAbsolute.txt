@@ -22,3 +22,4 @@ C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\controladorDeclara
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.csproj.CopyComplete
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.dll
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\controladorDeclaracao\obj\Debug\controladorDeclaracao.pdb
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\controladorDeclaracao\bin\Debug\controladorDeclaracao.dll.config

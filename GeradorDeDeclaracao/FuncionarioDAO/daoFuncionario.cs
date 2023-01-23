@@ -53,9 +53,10 @@ namespace FuncionarioDAO
                 UserID = daoUsuario.getNome(),
                 Password = daoUsuario.getSenha(),
                 Database = "gerador",
-                Port = 3306,
+                Port = 4550,
             };
             MySqlConnection conn = new MySqlConnection(db.ConnectionString);
+
             try
             {
                     string query = "INSERT INTO Funcionario (cracha, nome, setor, cargo) VALUES (@cracha, @nome, @setor, @cargo)";
@@ -93,7 +94,7 @@ namespace FuncionarioDAO
                 UserID = daoUsuario.getNome(),
                 Password = daoUsuario.getSenha(),
                 Database = "gerador",
-                Port = 3306,
+                Port = 4550,
             };
 
             MySqlConnection conn = new MySqlConnection(db.ConnectionString);
@@ -112,34 +113,46 @@ namespace FuncionarioDAO
                 return true;
          
         }
-        public static DataTable read()
+        public static List<mdlFuncionario> read()
         {
-            var db = new MySqlConnectionStringBuilder
+
+
+
+        List<mdlFuncionario> lista = new List<mdlFuncionario>();
+
+        var db = new MySqlConnectionStringBuilder
             {
                 Server = "192.168.0.253",
                 UserID = daoUsuario.getNome(),
                 Password = daoUsuario.getSenha(),
                 Database = "gerador",
-                Port = 3306,
+                Port = 4550,
             };
 
             MySqlConnection conn = new MySqlConnection(db.ConnectionString);
             try
             {
                 conn.Open();
-                string query = "SELECT cracha, nome FROM Funcionario ORDER BY nome ASC";
+                string query = "SELECT * FROM Funcionario ORDER BY nome ASC";
                 MySqlCommand comando = new MySqlCommand(query, conn);
                 comando.CommandType = CommandType.Text;
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                 DataTable tabela = new DataTable();
                 adaptador.Fill(tabela);
-                var leitura = comando.ExecuteReader();
+                var leitura = comando.ExecuteReader();;
+
                 if (leitura.Read() == true)
                 {
-                    cracha = Convert.ToInt32(leitura["cracha"]);
-                    nome = leitura["nome"].ToString();
-                    conn.Close();
-                    return tabela;
+                    foreach (DataRow dados in tabela.Rows)
+                    {
+                        var pmtCracha = Convert.ToInt32(dados["cracha"]);
+                        var pmtNome = dados["nome"].ToString();
+                        var pmtSetor = dados["setor"].ToString();
+                        var pmtCargo = dados["cargo"].ToString();
+                        lista.Add(new mdlFuncionario(pmtCracha, pmtNome, pmtSetor, pmtCargo)); 
+                    }
+                        conn.Close();
+                        return lista;
                 }
                 else
                 {
@@ -166,7 +179,7 @@ namespace FuncionarioDAO
                 UserID = daoUsuario.getNome(),
                 Password = daoUsuario.getSenha(),
                 Database = "gerador",
-                Port = 3306,
+                Port = 4550,
             };
 
             MySqlConnection conn = new MySqlConnection(db.ConnectionString);
@@ -199,7 +212,7 @@ namespace FuncionarioDAO
                 UserID = daoUsuario.getNome(),
                 Password = daoUsuario.getSenha(),
                 Database = "gerador",
-                Port = 3306,
+                Port = 4550,
             };
 
             MySqlConnection conn = new MySqlConnection(db.ConnectionString);
@@ -240,8 +253,10 @@ namespace FuncionarioDAO
                 conn.Close();
             }
         }
-        public static DataTable searchName(string pNome)
+        public static mdlFuncionario searchName(string pNome)
         {
+
+            mdlFuncionario funcionario = new mdlFuncionario();
 
             var db = new MySqlConnectionStringBuilder
             {
@@ -249,7 +264,7 @@ namespace FuncionarioDAO
                 UserID = "root",
                 Password = "T21nfr@--",
                 Database = "gerador",
-                Port = 3306,
+                Port = 4550,
             };
 
             MySqlConnection conn = new MySqlConnection(db.ConnectionString);
@@ -266,12 +281,19 @@ namespace FuncionarioDAO
                 var leitura = comando.ExecuteReader();
                 if (leitura.Read() == true)
                 {
-                    cracha = Convert.ToInt32(leitura["cracha"]);
-                    nome = leitura["nome"].ToString();
-                    setor = leitura["setor"].ToString();
-                    cargo = leitura["cargo"].ToString();
+                    foreach(DataRow dataRow in tabela.Rows)
+                    {
+                    cracha = Convert.ToInt32(dataRow["cracha"]);
+                    nome = dataRow["nome"].ToString();
+                    setor = dataRow["setor"].ToString();
+                    cargo = dataRow["cargo"].ToString();
+                    funcionario.setCracha(cracha);
+                    funcionario.setNome(nome);
+                    funcionario.setSetor(setor);
+                    funcionario.setCargo(cargo);
+                    }
                     conn.Close();
-                    return tabela;
+                    return funcionario;
                 }
                 else
                 {

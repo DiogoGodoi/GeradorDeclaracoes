@@ -114,3 +114,4 @@ C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaraca
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\UsuarioDAO.dll.config
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Usuario.pdb
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmLogin.resources
+C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\controladorDeclaracao.dll.config

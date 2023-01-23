@@ -105,25 +105,23 @@ namespace controladorDeclaracao
                 document.Close();
 
         }
-        public static void declaracaoPontoTudo(DataTable tabela, string caminho, string momento, string dia, string horario)
+        public static void declaracaoPontoTudo(List<mdlFuncionario> tabela, string caminho, string momento, string dia, string horario)
         {
             Document document = new Document(PageSize.A4);
             document.SetMargins(40, 40, 40, 80);
             document.AddCreationDate();
             PdfWriter escrever = PdfWriter.GetInstance(document, new FileStream(caminho, FileMode.Create));
             Font fonte = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
+                        
             document.Open();
 
-            DataTable dados = tabela; 
-
-            for (var i = 0; i < dados.Rows.Count; i++) {
-
+            foreach (var item in tabela) {
 
                 Paragraph marginTop = new Paragraph("");
                 document.Add(marginTop);
 
-                string nome = dados.Rows[i]["nome"].ToString();
-                string cracha = dados.Rows[i]["cracha"].ToString();
+                string nome = item.getNome();
+                string cracha = item.getCracha().ToString();
 
                 Image img = Image.GetInstance(logo);
                 img.Alignment = Element.ALIGN_CENTER;
@@ -200,6 +198,7 @@ namespace controladorDeclaracao
             document.AddCreationDate();
             PdfWriter escrever = PdfWriter.GetInstance(document, new FileStream(caminho, FileMode.Create));
             Font fonte = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
+            
             document.Open();
 
             foreach (var idx in listMdlFuncionario)
@@ -247,7 +246,7 @@ namespace controladorDeclaracao
 
                 Paragraph conteudo = new Paragraph("", fonte);
                 conteudo.Alignment = Element.ALIGN_CENTER;
-                conteudo.Add($"{momento} DIA {dia} às {horario} HORAS.");
+                conteudo.Add($"{momento} DIA {dia} às {horario}.");
                 document.Add(conteudo);
 
                 Paragraph espacamento4 = new Paragraph("");
@@ -276,7 +275,7 @@ namespace controladorDeclaracao
             document.Close();
 
         }
-        public static void declaracaoAntecipadaTudo(DataTable tabela, string caminho, string titulo, string momento, string dia, string horario)
+        public static void declaracaoAntecipadaTudo(List<mdlFuncionario> mdlListaFuncionarios, string caminho, string titulo, string momento, string dia, string horario)
         {
             Document document = new Document(PageSize.A4);
             document.SetMargins(40, 40, 40, 80);
@@ -284,19 +283,17 @@ namespace controladorDeclaracao
             PdfWriter escrever = PdfWriter.GetInstance(document, new FileStream(caminho, FileMode.Create));
             Font fonte = FontFactory.GetFont(BaseFont.HELVETICA_BOLD, 12);
 
-            DataTable dados = tabela;
-
             document.Open();
 
-            for (var i = 0; i < dados.Rows.Count; i++)
+            foreach (var item in mdlListaFuncionarios)
             {
 
                 Paragraph marginTop = new Paragraph();
                 marginTop.Add(new Paragraph(" "));
                 document.Add(marginTop);
 
-                string nome = dados.Rows[i]["nome"].ToString();
-                string cracha = dados.Rows[i]["cracha"].ToString();
+                string nome = item.getNome();
+                string cracha = item.getCracha().ToString();
 
                 Image img = Image.GetInstance(logo);
                 img.Alignment = Element.ALIGN_CENTER;
@@ -337,7 +334,7 @@ namespace controladorDeclaracao
 
                 Paragraph conteudo = new Paragraph("", fonte);
                 conteudo.Alignment = Element.ALIGN_CENTER;
-                conteudo.Add($"{momento} DIA {dia} às {horario} HORAS.");
+                conteudo.Add($"{momento} DIA {dia} às {horario}.");
                 document.Add(conteudo);
 
                 Paragraph espacamento4 = new Paragraph("");

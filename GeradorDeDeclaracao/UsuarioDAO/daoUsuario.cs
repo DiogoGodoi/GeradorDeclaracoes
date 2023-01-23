@@ -32,7 +32,7 @@ namespace UsuarioDAO
                     UserID = nome,
                     Password = senha,
                     Database = "gerador",
-                    Port = 3306,
+                    Port = 4550,
                 };
 
                 MySqlConnection conn = new MySqlConnection(acessDB.ConnectionString);

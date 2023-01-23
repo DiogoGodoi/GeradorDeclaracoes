@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using ControladorTelas;
+using controladorLogin;
+using UsuarioDAO;
+using Usuario;
 
 namespace GeradorDeDeclaracao
 {
@@ -25,6 +28,7 @@ namespace GeradorDeDeclaracao
         public string momento = "";
         public string data;
         public string horario;
+        ListViewItem listViewItem;
 
         public List<mdlFuncionario> listaFuncionario = new List<mdlFuncionario>();
         public ListViewItem item;
@@ -34,11 +38,14 @@ namespace GeradorDeDeclaracao
         }  
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            listViewFuncionarios.Items.Clear();
             nome = txtPesquisa.Text;
             var dados = controlador.searchName(nome);
+
             if(dados != null)
             {
-            dtFuncionarios.DataSource = dados;
+                ListViewItem item = new ListViewItem(dados.getNome());
+                listViewFuncionarios.Items.Add(item);
             }
         }  
         private void btnAdcionar_Click(object sender, EventArgs e)
@@ -160,35 +167,33 @@ namespace GeradorDeDeclaracao
         private void frmGerarDeclacarao_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            var dados = controlador.read();
-            dtFuncionarios.DataSource = dados;
-            
+
             if(controladorTelas.getTela() == "2" || controladorTelas.getTela() == "3")
             {
+                foreach (var item in controlador.read())
+                {
+                 listViewItem = new ListViewItem(item.getNome());
+                 listViewItem.SubItems.Add(item.getCracha().ToString());
+                 listViewFuncionarios.Items.Add(listViewItem);
+                }
+
                 radEntrada.Enabled = false;
                 radSaidaAlmoco.Enabled = false;
                 radRetornoAlmoco.Enabled = false;
                 radSaidaExpediente.Enabled = false;
                 radOutro.Checked = true;
-            }
-
-        }
-        private void dtFuncionarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            nome = dtFuncionarios.SelectedCells[0].Value.ToString();
-            var dados = controlador.searchName(nome);
-
-            if (dados != null)
+            }else
             {
-                txtCracha.Text = controlador.getCracha().ToString();
-                txtNome.Text = controlador.getNome();
-                txtCargo.Text = controlador.getCargo();
-                txtSetor.Text = controlador.getSetor();
+                foreach (var item in controlador.read())
+                {
+                    listViewItem = new ListViewItem(item.getNome());
+                    listViewItem.SubItems.Add(item.getCracha().ToString());
+                    listViewFuncionarios.Items.Add(listViewItem);
+                }
+
             }
-            else
-            {
-                MessageBox.Show("Sem dados");
-            }
+            
+
         }
         public void abrirJanelaMenuDeclaracoes()
         {
@@ -246,7 +251,7 @@ namespace GeradorDeDeclaracao
                 radRetornoAlmoco.Checked = false;
                 radSaidaExpediente.Checked = false;
                 listFuncionario.Items.Clear();
-                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto: "+ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void declaracaoPontoTudo()
@@ -297,7 +302,7 @@ namespace GeradorDeDeclaracao
                 radRetornoAlmoco.Checked = false;
                 radSaidaExpediente.Checked = false;
                 listFuncionario.Items.Clear();
-                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto: "+ex.Message, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void declaracaoAviso(string titulo)
@@ -514,6 +519,21 @@ namespace GeradorDeDeclaracao
                 radSaidaExpediente.Checked = false;
                 listFuncionario.Items.Clear();
                 MessageBox.Show("Existe um arquivo com o mesmo nome ja aberto", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void listViewFuncionarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in listViewFuncionarios.SelectedItems)
+            {
+                txtNome.Text = listViewFuncionarios.SelectedItems[0].Text.ToString();
+                var retorno = controlador.searchName(txtNome.Text);
+                if(retorno != null)
+                {
+                    txtCracha.Text = controlador.getCracha().ToString();
+                    txtSetor.Text = controlador.getSetor();
+                    txtCargo.Text = controlador.getCargo();
+                }
+
             }
         }
     }

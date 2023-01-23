@@ -13,6 +13,7 @@ namespace Funcionario
         private string setor { get; set; }
         private string cargo { get; set; }
 
+        public mdlFuncionario() { }
         public mdlFuncionario(int pCracha, string pNome, string pSetor, string pCargo)
         {
             cracha = pCracha;
@@ -35,6 +36,22 @@ namespace Funcionario
         public string getCargo()
         {
             return cargo;
+        }
+        public int setCracha(int pCracha)
+        {
+            return cracha = pCracha;
+        }
+        public string setNome(string pNome)
+        {
+            return nome = pNome;
+        }
+        public string setSetor(string pSetor)
+        {
+            return setor = pSetor;
+        }
+        public string setCargo(string pCargo)
+        {
+            return cargo = pCargo;
         }
     }
 }
