@@ -58,6 +58,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelConteudo = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblRodape = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -82,6 +83,7 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelConteudo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -227,7 +229,7 @@
             // 
             // panelDeclarações
             // 
-            this.panelDeclarações.BackColor = System.Drawing.Color.Black;
+            this.panelDeclarações.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panelDeclarações.Controls.Add(this.Declarações);
             this.panelDeclarações.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDeclarações.Location = new System.Drawing.Point(0, 241);
@@ -409,7 +411,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.labelCadastros);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 61);
@@ -451,6 +453,8 @@
             // 
             // PanelConteudo
             // 
+            this.PanelConteudo.BackColor = System.Drawing.Color.White;
+            this.PanelConteudo.Controls.Add(this.pictureBox9);
             this.PanelConteudo.Controls.Add(this.panel2);
             this.PanelConteudo.Controls.Add(this.panel4);
             this.PanelConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -458,6 +462,17 @@
             this.PanelConteudo.Name = "PanelConteudo";
             this.PanelConteudo.Size = new System.Drawing.Size(864, 749);
             this.PanelConteudo.TabIndex = 10;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(240, 302);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(416, 130);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 16;
+            this.pictureBox9.TabStop = false;
             // 
             // panel2
             // 
@@ -536,6 +551,7 @@
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelConteudo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -579,6 +595,7 @@
         private System.Windows.Forms.Button btnAviso;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
 

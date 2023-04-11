@@ -26,8 +26,8 @@
     <InstallUrl>\\servidor\Publico\Infra - TI\Softwares\Utilitários\Instalador - Gerador de declarações\archives\</InstallUrl>
     <UpdateUrl>\\servidor\Publico\Infra - TI\Softwares\Utilitários\Instalador - Gerador de declarações\archives\</UpdateUrl>
     <MinimumRequiredVersion>1.0.0.26</MinimumRequiredVersion>
-    <ApplicationRevision>28</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -103,10 +103,20 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu Declaracao.Designer.cs" />
+    <Compile Include="Menu Declaracao1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu Declaracao.resx</DependentUpon>
+    </Compile>
     <Compile Include="MenuCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuCadastro.Designer.cs" />
+    <Compile Include="MenuCadastro1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuCadastro.resx</DependentUpon>
+    </Compile>
     <Compile Include="TelaAlterar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,8 +149,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu Declaracao.resx" />
-    <EmbeddedResource Include="MenuCadastro.resx" />
+    <EmbeddedResource Include="Menu Declaracao.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menu Declaracao1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCadastro.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MenuCadastro1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
