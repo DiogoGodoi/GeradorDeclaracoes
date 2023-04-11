@@ -69,5 +69,10 @@ namespace GeradorDeDeclaracao
         {
             Application.Run(new frmDeletar());
         }
+
+        private void frmCadastro_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;   
+        }
     }
 }

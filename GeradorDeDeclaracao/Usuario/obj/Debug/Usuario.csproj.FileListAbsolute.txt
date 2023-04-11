@@ -1,6 +1,0 @@
-C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Usuario\bin\Debug\Usuario.dll
-C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Usuario\bin\Debug\Usuario.pdb
-C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Usuario\obj\Debug\Usuario.csproj.AssemblyReference.cache
-C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Usuario\obj\Debug\Usuario.csproj.CoreCompileInputs.cache
-C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Usuario\obj\Debug\Usuario.dll
-C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\Usuario\obj\Debug\Usuario.pdb

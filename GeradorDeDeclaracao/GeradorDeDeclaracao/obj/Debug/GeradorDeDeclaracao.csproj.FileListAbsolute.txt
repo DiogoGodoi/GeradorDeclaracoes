@@ -115,3 +115,51 @@ C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaraca
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Usuario.pdb
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmLogin.resources
 C:\Users\infra\Desktop\Software - Gerador\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\controladorDeclaracao.dll.config
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\GeradorDeDeclaracao.exe.config
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\GeradorDeDeclaracao.exe.manifest
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\GeradorDeDeclaracao.application
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\GeradorDeDeclaracao.exe
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\GeradorDeDeclaracao.pdb
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\itextsharp.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\MySqlConnector.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Memory.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Buffers.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\itextsharp.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\MySqlConnector.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Memory.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Buffers.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.csproj.AssemblyReference.cache
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.csproj.SuggestedBindingRedirects.cache
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmGerarDeclacarao.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmLogin.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.Properties.Resources.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmAlterar.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmCadastrar.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmDeletar.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.frmInicial.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.csproj.GenerateResource.cache
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.csproj.CoreCompileInputs.cache
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.exe.manifest
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.application
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.csproj.CopyComplete
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.exe
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.pdb
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.Menu Declaracao.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\obj\Debug\GeradorDeDeclaracao.MenuCadastro.resources
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Controller.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Dao.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Model.dll
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Controller.pdb
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Controller.dll.config
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Dao.pdb
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Dao.dll.config
+C:\Users\infra\Desktop\Declarações\GeradorDeDeclaracao\GeradorDeDeclaracao\bin\Debug\Model.pdb

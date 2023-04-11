@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ControladorTelas;
+using Model;
+using Dao;
+using Controller;
 
 namespace GeradorDeDeclaracao
 {
     public partial class frmMenuDeclaracao : Form
-    {
+    {   
+        Form formAtivo = new Form();
         public frmMenuDeclaracao()
         {
             InitializeComponent();
@@ -58,5 +61,10 @@ namespace GeradorDeDeclaracao
         {
             Application.Run(new frmInicial());
         }
+        private void frmMenuDeclaracao_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
     }
 }

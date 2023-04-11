@@ -13,19 +13,23 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\infra\Desktop\gerador de declarações\</PublishUrl>
+    <PublishUrl>P:\Infra - TI\Softwares\Utilitários\Instalador - Gerador de declarações\archives\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>26</ApplicationRevision>
+    <InstallUrl>\\servidor\Publico\Infra - TI\Softwares\Utilitários\Instalador - Gerador de declarações\archives\</InstallUrl>
+    <UpdateUrl>\\servidor\Publico\Infra - TI\Softwares\Utilitários\Instalador - Gerador de declarações\archives\</UpdateUrl>
+    <MinimumRequiredVersion>1.0.0.26</MinimumRequiredVersion>
+    <ApplicationRevision>28</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -60,10 +64,13 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -95,15 +102,11 @@
     <Compile Include="Menu Declaracao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu Declaracao.Designer.cs">
-      <DependentUpon>Menu Declaracao.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Menu Declaracao.Designer.cs" />
     <Compile Include="MenuCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuCadastro.Designer.cs">
-      <DependentUpon>MenuCadastro.cs</DependentUpon>
-    </Compile>
+    <Compile Include="MenuCadastro.Designer.cs" />
     <Compile Include="TelaAlterar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,12 +139,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu Declaracao.resx">
-      <DependentUpon>Menu Declaracao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuCadastro.resx">
-      <DependentUpon>MenuCadastro.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Menu Declaracao.resx" />
+    <EmbeddedResource Include="MenuCadastro.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -182,40 +181,6 @@
     <None Include="Resources\erro.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\controladorDeclaracao\ControladorDeclaracao.csproj">
-      <Project>{4004e588-a108-43ee-bea7-6e1a14867962}</Project>
-      <Name>ControladorDeclaracao</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\controladorLogin\ControladorLogin.csproj">
-      <Project>{fc042272-7312-4a67-92a8-5127223673de}</Project>
-      <Name>ControladorLogin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ControladorTelas\ControladorTelas.csproj">
-      <Project>{c3f89b76-7c0c-441e-af2f-47829dcd6b5d}</Project>
-      <Name>ControladorTelas</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Controlador\Controlador.csproj">
-      <Project>{da1fe635-9e22-4bba-8950-8957b5751335}</Project>
-      <Name>Controlador</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FuncionarioDAO\FuncionarioDAO.csproj">
-      <Project>{cf68212b-271a-4d4c-9052-d49009ab4599}</Project>
-      <Name>FuncionarioDAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Funcionario\Funcionario.csproj">
-      <Project>{fd01873d-101f-4092-b6e4-6e6ceb2021a3}</Project>
-      <Name>Funcionario</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsuarioDAO\UsuarioDAO.csproj">
-      <Project>{093eec01-e004-43ce-9c9b-38ea575d6839}</Project>
-      <Name>UsuarioDAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Usuario\Usuario.csproj">
-      <Project>{922f740d-e1c2-443a-a6d9-df27edd3b966}</Project>
-      <Name>Usuario</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7 %28x86 e x64%29</ProductName>
@@ -228,7 +193,22 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{feb90d0d-229f-4ed6-8a24-5e0c94ba3eac}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dao\Dao.csproj">
+      <Project>{3e76ac82-8a82-48a1-827d-559891ccda83}</Project>
+      <Name>Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{adfe547a-69bf-4100-abf4-75d87fa94ff6}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

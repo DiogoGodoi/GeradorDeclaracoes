@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGerarDeclacarao));
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.grpConteudo = new System.Windows.Forms.GroupBox();
             this.grpPesquisar = new System.Windows.Forms.GroupBox();
             this.listViewFuncionarios = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblFuncionario = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
@@ -60,14 +60,15 @@
             this.lblSetor = new System.Windows.Forms.Label();
             this.lblCargo = new System.Windows.Forms.Label();
             this.txtCracha = new System.Windows.Forms.TextBox();
-            this.grpTitulo = new System.Windows.Forms.GroupBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnGerarTudo = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.grpConteudo.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblRodape = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.grpPesquisar.SuspendLayout();
             this.grpAdionar.SuspendLayout();
-            this.grpTitulo.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -79,24 +80,13 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoltar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(603, 664);
+            this.btnVoltar.Location = new System.Drawing.Point(457, 645);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(160, 21);
             this.btnVoltar.TabIndex = 28;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // grpConteudo
-            // 
-            this.grpConteudo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpConteudo.Controls.Add(this.grpPesquisar);
-            this.grpConteudo.Controls.Add(this.grpAdionar);
-            this.grpConteudo.Location = new System.Drawing.Point(12, 76);
-            this.grpConteudo.Name = "grpConteudo";
-            this.grpConteudo.Size = new System.Drawing.Size(1098, 573);
-            this.grpConteudo.TabIndex = 31;
-            this.grpConteudo.TabStop = false;
             // 
             // grpPesquisar
             // 
@@ -108,24 +98,25 @@
             this.grpPesquisar.Controls.Add(this.label3);
             this.grpPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpPesquisar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.grpPesquisar.Location = new System.Drawing.Point(529, 30);
+            this.grpPesquisar.Location = new System.Drawing.Point(476, 139);
             this.grpPesquisar.Name = "grpPesquisar";
-            this.grpPesquisar.Size = new System.Drawing.Size(548, 520);
+            this.grpPesquisar.Size = new System.Drawing.Size(342, 485);
             this.grpPesquisar.TabIndex = 47;
             this.grpPesquisar.TabStop = false;
             this.grpPesquisar.Text = "Pesquisar";
             // 
             // listViewFuncionarios
             // 
+            this.listViewFuncionarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listViewFuncionarios.BackColor = System.Drawing.Color.White;
             this.listViewFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewFuncionarios.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader1});
             this.listViewFuncionarios.HideSelection = false;
-            this.listViewFuncionarios.Location = new System.Drawing.Point(24, 94);
+            this.listViewFuncionarios.Location = new System.Drawing.Point(20, 88);
             this.listViewFuncionarios.Name = "listViewFuncionarios";
-            this.listViewFuncionarios.Size = new System.Drawing.Size(501, 403);
+            this.listViewFuncionarios.Size = new System.Drawing.Size(306, 389);
             this.listViewFuncionarios.TabIndex = 65;
             this.listViewFuncionarios.UseCompatibleStateImageBehavior = false;
             this.listViewFuncionarios.View = System.Windows.Forms.View.Details;
@@ -136,13 +127,18 @@
             this.columnHeader2.Text = "Nome";
             this.columnHeader2.Width = 405;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Cracha";
+            this.columnHeader1.Width = 85;
+            // 
             // lblFuncionario
             // 
             this.lblFuncionario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFuncionario.AutoSize = true;
             this.lblFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuncionario.ForeColor = System.Drawing.Color.Navy;
-            this.lblFuncionario.Location = new System.Drawing.Point(19, 62);
+            this.lblFuncionario.Location = new System.Drawing.Point(17, 51);
             this.lblFuncionario.Name = "lblFuncionario";
             this.lblFuncionario.Size = new System.Drawing.Size(92, 16);
             this.lblFuncionario.TabIndex = 64;
@@ -157,7 +153,7 @@
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisar.Location = new System.Drawing.Point(449, 32);
+            this.btnPesquisar.Location = new System.Drawing.Point(250, 26);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(76, 21);
             this.btnPesquisar.TabIndex = 49;
@@ -169,9 +165,9 @@
             // 
             this.txtPesquisa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisa.Location = new System.Drawing.Point(75, 32);
+            this.txtPesquisa.Location = new System.Drawing.Point(71, 26);
             this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.Size = new System.Drawing.Size(368, 20);
+            this.txtPesquisa.Size = new System.Drawing.Size(173, 20);
             this.txtPesquisa.TabIndex = 48;
             // 
             // label3
@@ -180,7 +176,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(21, 33);
+            this.label3.Location = new System.Drawing.Point(17, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 47;
@@ -211,9 +207,9 @@
             this.grpAdionar.Controls.Add(this.txtCracha);
             this.grpAdionar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpAdionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.grpAdionar.Location = new System.Drawing.Point(21, 30);
+            this.grpAdionar.Location = new System.Drawing.Point(31, 139);
             this.grpAdionar.Name = "grpAdionar";
-            this.grpAdionar.Size = new System.Drawing.Size(502, 520);
+            this.grpAdionar.Size = new System.Drawing.Size(423, 485);
             this.grpAdionar.TabIndex = 46;
             this.grpAdionar.TabStop = false;
             this.grpAdionar.Text = "Adcionar";
@@ -224,7 +220,7 @@
             this.lblLista.AutoSize = true;
             this.lblLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLista.ForeColor = System.Drawing.Color.Navy;
-            this.lblLista.Location = new System.Drawing.Point(17, 211);
+            this.lblLista.Location = new System.Drawing.Point(26, 193);
             this.lblLista.Name = "lblLista";
             this.lblLista.Size = new System.Drawing.Size(154, 16);
             this.lblLista.TabIndex = 63;
@@ -235,9 +231,9 @@
             this.txtOutro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtOutro.Enabled = false;
             this.txtOutro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOutro.Location = new System.Drawing.Point(189, 178);
+            this.txtOutro.Location = new System.Drawing.Point(159, 165);
             this.txtOutro.Name = "txtOutro";
-            this.txtOutro.Size = new System.Drawing.Size(291, 20);
+            this.txtOutro.Size = new System.Drawing.Size(229, 20);
             this.txtOutro.TabIndex = 62;
             // 
             // radOutro
@@ -246,7 +242,7 @@
             this.radOutro.AutoSize = true;
             this.radOutro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radOutro.ForeColor = System.Drawing.Color.Navy;
-            this.radOutro.Location = new System.Drawing.Point(121, 177);
+            this.radOutro.Location = new System.Drawing.Point(91, 166);
             this.radOutro.Name = "radOutro";
             this.radOutro.Size = new System.Drawing.Size(62, 19);
             this.radOutro.TabIndex = 61;
@@ -261,7 +257,7 @@
             this.radRetornoAlmoco.AutoSize = true;
             this.radRetornoAlmoco.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radRetornoAlmoco.ForeColor = System.Drawing.Color.Navy;
-            this.radRetornoAlmoco.Location = new System.Drawing.Point(121, 152);
+            this.radRetornoAlmoco.Location = new System.Drawing.Point(91, 139);
             this.radRetornoAlmoco.Name = "radRetornoAlmoco";
             this.radRetornoAlmoco.Size = new System.Drawing.Size(129, 19);
             this.radRetornoAlmoco.TabIndex = 60;
@@ -276,7 +272,7 @@
             this.radSaidaExpediente.AutoSize = true;
             this.radSaidaExpediente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSaidaExpediente.ForeColor = System.Drawing.Color.Navy;
-            this.radSaidaExpediente.Location = new System.Drawing.Point(291, 152);
+            this.radSaidaExpediente.Location = new System.Drawing.Point(253, 139);
             this.radSaidaExpediente.Name = "radSaidaExpediente";
             this.radSaidaExpediente.Size = new System.Drawing.Size(138, 19);
             this.radSaidaExpediente.TabIndex = 59;
@@ -291,7 +287,7 @@
             this.radSaidaAlmoco.AutoSize = true;
             this.radSaidaAlmoco.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radSaidaAlmoco.ForeColor = System.Drawing.Color.Navy;
-            this.radSaidaAlmoco.Location = new System.Drawing.Point(291, 128);
+            this.radSaidaAlmoco.Location = new System.Drawing.Point(253, 115);
             this.radSaidaAlmoco.Name = "radSaidaAlmoco";
             this.radSaidaAlmoco.Size = new System.Drawing.Size(114, 19);
             this.radSaidaAlmoco.TabIndex = 58;
@@ -306,7 +302,7 @@
             this.radEntrada.AutoSize = true;
             this.radEntrada.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radEntrada.ForeColor = System.Drawing.Color.Navy;
-            this.radEntrada.Location = new System.Drawing.Point(121, 128);
+            this.radEntrada.Location = new System.Drawing.Point(91, 115);
             this.radEntrada.Name = "radEntrada";
             this.radEntrada.Size = new System.Drawing.Size(153, 19);
             this.radEntrada.TabIndex = 57;
@@ -321,7 +317,7 @@
             this.lblMotivo.AutoSize = true;
             this.lblMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMotivo.ForeColor = System.Drawing.Color.Navy;
-            this.lblMotivo.Location = new System.Drawing.Point(17, 138);
+            this.lblMotivo.Location = new System.Drawing.Point(26, 129);
             this.lblMotivo.Name = "lblMotivo";
             this.lblMotivo.Size = new System.Drawing.Size(57, 16);
             this.lblMotivo.TabIndex = 56;
@@ -333,7 +329,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.Navy;
-            this.lblNome.Location = new System.Drawing.Point(17, 33);
+            this.lblNome.Location = new System.Drawing.Point(26, 26);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(48, 16);
             this.lblNome.TabIndex = 35;
@@ -344,9 +340,9 @@
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(79, 32);
+            this.txtNome.Location = new System.Drawing.Point(91, 26);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(350, 21);
+            this.txtNome.Size = new System.Drawing.Size(244, 21);
             this.txtNome.TabIndex = 37;
             // 
             // btnRemover
@@ -358,7 +354,7 @@
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRemover.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Location = new System.Drawing.Point(261, 476);
+            this.btnRemover.Location = new System.Drawing.Point(231, 456);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(104, 21);
             this.btnRemover.TabIndex = 35;
@@ -375,7 +371,7 @@
             this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGerar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerar.ForeColor = System.Drawing.Color.White;
-            this.btnGerar.Location = new System.Drawing.Point(121, 476);
+            this.btnGerar.Location = new System.Drawing.Point(91, 456);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(104, 21);
             this.btnGerar.TabIndex = 34;
@@ -385,14 +381,13 @@
             // 
             // btnAdcionar
             // 
-            this.btnAdcionar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdcionar.BackColor = System.Drawing.Color.Navy;
             this.btnAdcionar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAdcionar.FlatAppearance.BorderSize = 2;
             this.btnAdcionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdcionar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdcionar.ForeColor = System.Drawing.Color.White;
-            this.btnAdcionar.Location = new System.Drawing.Point(435, 32);
+            this.btnAdcionar.Location = new System.Drawing.Point(341, 26);
             this.btnAdcionar.Name = "btnAdcionar";
             this.btnAdcionar.Size = new System.Drawing.Size(45, 21);
             this.btnAdcionar.TabIndex = 51;
@@ -405,9 +400,9 @@
             this.txtCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCargo.Enabled = false;
             this.txtCargo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.Location = new System.Drawing.Point(79, 94);
+            this.txtCargo.Location = new System.Drawing.Point(91, 88);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(401, 21);
+            this.txtCargo.Size = new System.Drawing.Size(297, 21);
             this.txtCargo.TabIndex = 41;
             // 
             // listFuncionario
@@ -417,9 +412,9 @@
             this.columnFunc});
             this.listFuncionario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listFuncionario.HideSelection = false;
-            this.listFuncionario.Location = new System.Drawing.Point(20, 230);
+            this.listFuncionario.Location = new System.Drawing.Point(29, 212);
             this.listFuncionario.Name = "listFuncionario";
-            this.listFuncionario.Size = new System.Drawing.Size(460, 238);
+            this.listFuncionario.Size = new System.Drawing.Size(359, 238);
             this.listFuncionario.TabIndex = 43;
             this.listFuncionario.UseCompatibleStateImageBehavior = false;
             this.listFuncionario.View = System.Windows.Forms.View.Details;
@@ -434,9 +429,9 @@
             this.txtSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSetor.Enabled = false;
             this.txtSetor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetor.Location = new System.Drawing.Point(216, 61);
+            this.txtSetor.Location = new System.Drawing.Point(241, 55);
             this.txtSetor.Name = "txtSetor";
-            this.txtSetor.Size = new System.Drawing.Size(264, 21);
+            this.txtSetor.Size = new System.Drawing.Size(147, 21);
             this.txtSetor.TabIndex = 40;
             // 
             // lblCracha
@@ -445,7 +440,7 @@
             this.lblCracha.AutoSize = true;
             this.lblCracha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCracha.ForeColor = System.Drawing.Color.Navy;
-            this.lblCracha.Location = new System.Drawing.Point(17, 62);
+            this.lblCracha.Location = new System.Drawing.Point(26, 56);
             this.lblCracha.Name = "lblCracha";
             this.lblCracha.Size = new System.Drawing.Size(56, 16);
             this.lblCracha.TabIndex = 34;
@@ -457,7 +452,7 @@
             this.lblSetor.AutoSize = true;
             this.lblSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetor.ForeColor = System.Drawing.Color.Navy;
-            this.lblSetor.Location = new System.Drawing.Point(166, 62);
+            this.lblSetor.Location = new System.Drawing.Point(191, 56);
             this.lblSetor.Name = "lblSetor";
             this.lblSetor.Size = new System.Drawing.Size(44, 16);
             this.lblSetor.TabIndex = 38;
@@ -469,7 +464,7 @@
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.Navy;
-            this.lblCargo.Location = new System.Drawing.Point(17, 95);
+            this.lblCargo.Location = new System.Drawing.Point(26, 89);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(49, 16);
             this.lblCargo.TabIndex = 39;
@@ -480,32 +475,10 @@
             this.txtCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCracha.Enabled = false;
             this.txtCracha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCracha.Location = new System.Drawing.Point(79, 61);
+            this.txtCracha.Location = new System.Drawing.Point(91, 55);
             this.txtCracha.Name = "txtCracha";
-            this.txtCracha.Size = new System.Drawing.Size(81, 21);
+            this.txtCracha.Size = new System.Drawing.Size(94, 21);
             this.txtCracha.TabIndex = 36;
-            // 
-            // grpTitulo
-            // 
-            this.grpTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpTitulo.Controls.Add(this.lblTitulo);
-            this.grpTitulo.Location = new System.Drawing.Point(12, 12);
-            this.grpTitulo.Name = "grpTitulo";
-            this.grpTitulo.Size = new System.Drawing.Size(1098, 58);
-            this.grpTitulo.TabIndex = 32;
-            this.grpTitulo.TabStop = false;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTitulo.Location = new System.Drawing.Point(423, 16);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(190, 24);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Gerar Declaração";
             // 
             // btnGerarTudo
             // 
@@ -516,7 +489,7 @@
             this.btnGerarTudo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGerarTudo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarTudo.ForeColor = System.Drawing.Color.White;
-            this.btnGerarTudo.Location = new System.Drawing.Point(412, 664);
+            this.btnGerarTudo.Location = new System.Drawing.Point(266, 645);
             this.btnGerarTudo.Name = "btnGerarTudo";
             this.btnGerarTudo.Size = new System.Drawing.Size(160, 21);
             this.btnGerarTudo.TabIndex = 33;
@@ -524,31 +497,75 @@
             this.btnGerarTudo.UseVisualStyleBackColor = false;
             this.btnGerarTudo.Click += new System.EventHandler(this.btnGerarTudo_Click);
             // 
-            // columnHeader1
+            // panel2
             // 
-            this.columnHeader1.Text = "Cracha";
-            this.columnHeader1.Width = 85;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.lblRodape);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 743);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(864, 45);
+            this.panel2.TabIndex = 35;
+            // 
+            // lblRodape
+            // 
+            this.lblRodape.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRodape.AutoSize = true;
+            this.lblRodape.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRodape.ForeColor = System.Drawing.Color.White;
+            this.lblRodape.Location = new System.Drawing.Point(326, 10);
+            this.lblRodape.Name = "lblRodape";
+            this.lblRodape.Size = new System.Drawing.Size(231, 22);
+            this.lblRodape.TabIndex = 1;
+            this.lblRodape.Text = "Gerador de declarações";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.lblTitulo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(864, 76);
+            this.panel1.TabIndex = 34;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(308, 25);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(249, 32);
+            this.lblTitulo.TabIndex = 13;
+            this.lblTitulo.Text = "Gerar Declaração";
             // 
             // frmGerarDeclacarao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 708);
+            this.ClientSize = new System.Drawing.Size(864, 788);
+            this.Controls.Add(this.grpPesquisar);
+            this.Controls.Add(this.grpAdionar);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnGerarTudo);
-            this.Controls.Add(this.grpTitulo);
-            this.Controls.Add(this.grpConteudo);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnVoltar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGerarDeclacarao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerar Declaracao";
             this.Load += new System.EventHandler(this.frmGerarDeclacarao_Load);
-            this.grpConteudo.ResumeLayout(false);
             this.grpPesquisar.ResumeLayout(false);
             this.grpPesquisar.PerformLayout();
             this.grpAdionar.ResumeLayout(false);
             this.grpAdionar.PerformLayout();
-            this.grpTitulo.ResumeLayout(false);
-            this.grpTitulo.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -556,9 +573,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.GroupBox grpConteudo;
-        private System.Windows.Forms.GroupBox grpTitulo;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnGerarTudo;
         private System.Windows.Forms.GroupBox grpPesquisar;
         private System.Windows.Forms.Button btnPesquisar;
@@ -590,5 +604,9 @@
         private System.Windows.Forms.ListView listViewFuncionarios;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblRodape;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        0gAADdIBb5L+jgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACS0SURBVHhe7d15
+        0AAADdABEGw9BwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACS0SURBVHhe7d15
         tG1ZVR9gqwqKpqDoYgQFBEGUKKCiNNHQxBADiBqRxiAqTQSlUYMG0EGjIAIqgg5FWgEF0RFjhCihUQwC
         QlCRSBQBwY5WOhHpm/xW1b3WfuvN995tzj5nN98f3xv1fqPqnr33mmvPW/ees+dnfeYznwEAVqYMAYBl
         K0MAYNnKEABYtjIEAJatDAGAZStDAGDZyhAAWLYyBACWrQwBgGUrQwBg2coQAFi2MgQAlq0MAYBlK0MA
@@ -284,7 +284,7 @@
   <data name="pctMenuDeclaracao.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEmiSURBVHhe7b0L
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEmiSURBVHhe7b0L
         eFTXeb/L1cY3bGNjbO53bMDGGNuAATHSaCQEFkjCMr6bEBuDZPnSpsmTNm1ok5PjJj25t03+bdNcenpJ
         z78nSZu0ubRNc5xylUDojiSEEGg0YLCNbQwG9J21RotGzCzDjDSzZ+897/s87yO7jaW996y1frP3Xutb
         QwAA4MPZJjIsXyL5ys/nS/hX+dJzRHnG2KPcHpKerxRIT3FAZIT5zwAAAMCLFEv3tSEJfyIkkS4V8pKg
@@ -605,7 +605,7 @@
   <data name="pctCadastro.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADlzSURBVHhe7Z0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADlzSURBVHhe7Z0J
         kFzHfZ8pWZZlSdaZ2GXLOcpxHJUdlyuOY6ciVyV2yoodV8quOHKVS6nYrkocWYljE3sA2NldzAI7O1gQ
         WBIAQRIEL0kUZeIGCFLiIRkSzRMAQVKiLB7W4gYW9+7MLIC9OtOzDQpY/AjMvnmv3/V9VV+JksCZxvTr
         /6/fe/363QQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

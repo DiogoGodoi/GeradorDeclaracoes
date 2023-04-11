@@ -1,6 +1,4 @@
-﻿using Controlador;
-using controladorDeclaracao;
-using Funcionario;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,10 +10,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using ControladorTelas;
-using controladorLogin;
-using UsuarioDAO;
-using Usuario;
+using Model;
+using Dao;
+using Controller;
 
 namespace GeradorDeDeclaracao
 {

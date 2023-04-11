@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Controlador;
-using Funcionario;
+using Model;
+using Dao;
+using Controller;
 
 namespace GeradorDeDeclaracao
 {

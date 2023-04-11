@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrar));
-            this.grpTitulo = new System.Windows.Forms.GroupBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblCracha = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.grpConteudo = new System.Windows.Forms.GroupBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtCargo = new System.Windows.Forms.TextBox();
@@ -100,33 +97,15 @@
             this.radAlmox = new System.Windows.Forms.RadioButton();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCracha = new System.Windows.Forms.TextBox();
-            this.grpTitulo.SuspendLayout();
-            this.grpConteudo.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblRodape = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.grpCargo.SuspendLayout();
             this.grpSetor.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grpTitulo
-            // 
-            this.grpTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpTitulo.Controls.Add(this.lblTitulo);
-            this.grpTitulo.Location = new System.Drawing.Point(12, 12);
-            this.grpTitulo.Name = "grpTitulo";
-            this.grpTitulo.Size = new System.Drawing.Size(752, 62);
-            this.grpTitulo.TabIndex = 11;
-            this.grpTitulo.TabStop = false;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.Navy;
-            this.lblTitulo.Location = new System.Drawing.Point(303, 15);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(157, 33);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Cadastrar";
             // 
             // lblCracha
             // 
@@ -134,7 +113,7 @@
             this.lblCracha.AutoSize = true;
             this.lblCracha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCracha.ForeColor = System.Drawing.Color.Navy;
-            this.lblCracha.Location = new System.Drawing.Point(12, 29);
+            this.lblCracha.Location = new System.Drawing.Point(53, 177);
             this.lblCracha.Name = "lblCracha";
             this.lblCracha.Size = new System.Drawing.Size(56, 16);
             this.lblCracha.TabIndex = 12;
@@ -146,32 +125,11 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.Navy;
-            this.lblNome.Location = new System.Drawing.Point(229, 29);
+            this.lblNome.Location = new System.Drawing.Point(270, 177);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(48, 16);
             this.lblNome.TabIndex = 13;
             this.lblNome.Text = "Nome";
-            // 
-            // grpConteudo
-            // 
-            this.grpConteudo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpConteudo.Controls.Add(this.btnVoltar);
-            this.grpConteudo.Controls.Add(this.btnCadastrar);
-            this.grpConteudo.Controls.Add(this.txtCargo);
-            this.grpConteudo.Controls.Add(this.txtSetor);
-            this.grpConteudo.Controls.Add(this.lblSetor);
-            this.grpConteudo.Controls.Add(this.lblCargo);
-            this.grpConteudo.Controls.Add(this.grpCargo);
-            this.grpConteudo.Controls.Add(this.grpSetor);
-            this.grpConteudo.Controls.Add(this.txtNome);
-            this.grpConteudo.Controls.Add(this.txtCracha);
-            this.grpConteudo.Controls.Add(this.lblCracha);
-            this.grpConteudo.Controls.Add(this.lblNome);
-            this.grpConteudo.Location = new System.Drawing.Point(12, 91);
-            this.grpConteudo.Name = "grpConteudo";
-            this.grpConteudo.Size = new System.Drawing.Size(752, 443);
-            this.grpConteudo.TabIndex = 14;
-            this.grpConteudo.TabStop = false;
             // 
             // btnVoltar
             // 
@@ -182,7 +140,7 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoltar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(433, 402);
+            this.btnVoltar.Location = new System.Drawing.Point(474, 550);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(125, 23);
             this.btnVoltar.TabIndex = 23;
@@ -199,7 +157,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastrar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(232, 402);
+            this.btnCadastrar.Location = new System.Drawing.Point(273, 550);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(125, 23);
             this.btnCadastrar.TabIndex = 22;
@@ -212,7 +170,7 @@
             this.txtCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCargo.Enabled = false;
             this.txtCargo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.Location = new System.Drawing.Point(279, 55);
+            this.txtCargo.Location = new System.Drawing.Point(320, 203);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(467, 21);
             this.txtCargo.TabIndex = 21;
@@ -222,7 +180,7 @@
             this.txtSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSetor.Enabled = false;
             this.txtSetor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSetor.Location = new System.Drawing.Point(74, 55);
+            this.txtSetor.Location = new System.Drawing.Point(115, 203);
             this.txtSetor.Name = "txtSetor";
             this.txtSetor.Size = new System.Drawing.Size(146, 21);
             this.txtSetor.TabIndex = 20;
@@ -233,7 +191,7 @@
             this.lblSetor.AutoSize = true;
             this.lblSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSetor.ForeColor = System.Drawing.Color.Navy;
-            this.lblSetor.Location = new System.Drawing.Point(12, 58);
+            this.lblSetor.Location = new System.Drawing.Point(53, 206);
             this.lblSetor.Name = "lblSetor";
             this.lblSetor.Size = new System.Drawing.Size(44, 16);
             this.lblSetor.TabIndex = 18;
@@ -245,7 +203,7 @@
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargo.ForeColor = System.Drawing.Color.Navy;
-            this.lblCargo.Location = new System.Drawing.Point(229, 56);
+            this.lblCargo.Location = new System.Drawing.Point(270, 204);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(49, 16);
             this.lblCargo.TabIndex = 19;
@@ -292,7 +250,7 @@
             this.grpCargo.Controls.Add(this.radAjMotorista);
             this.grpCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpCargo.ForeColor = System.Drawing.Color.Navy;
-            this.grpCargo.Location = new System.Drawing.Point(232, 86);
+            this.grpCargo.Location = new System.Drawing.Point(273, 234);
             this.grpCargo.Name = "grpCargo";
             this.grpCargo.Size = new System.Drawing.Size(514, 298);
             this.grpCargo.TabIndex = 17;
@@ -828,7 +786,7 @@
             this.grpSetor.Controls.Add(this.radAlmox);
             this.grpSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSetor.ForeColor = System.Drawing.Color.Navy;
-            this.grpSetor.Location = new System.Drawing.Point(9, 86);
+            this.grpSetor.Location = new System.Drawing.Point(50, 234);
             this.grpSetor.Name = "grpSetor";
             this.grpSetor.Size = new System.Drawing.Size(211, 298);
             this.grpSetor.TabIndex = 16;
@@ -1119,7 +1077,7 @@
             // 
             this.txtNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNome.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(279, 28);
+            this.txtNome.Location = new System.Drawing.Point(320, 176);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(467, 21);
             this.txtNome.TabIndex = 15;
@@ -1128,41 +1086,96 @@
             // 
             this.txtCracha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCracha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCracha.Location = new System.Drawing.Point(74, 28);
+            this.txtCracha.Location = new System.Drawing.Point(115, 176);
             this.txtCracha.Name = "txtCracha";
             this.txtCracha.Size = new System.Drawing.Size(146, 21);
             this.txtCracha.TabIndex = 14;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.lblRodape);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 704);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(848, 45);
+            this.panel2.TabIndex = 37;
+            // 
+            // lblRodape
+            // 
+            this.lblRodape.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRodape.AutoSize = true;
+            this.lblRodape.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRodape.ForeColor = System.Drawing.Color.White;
+            this.lblRodape.Location = new System.Drawing.Point(318, 10);
+            this.lblRodape.Name = "lblRodape";
+            this.lblRodape.Size = new System.Drawing.Size(231, 22);
+            this.lblRodape.TabIndex = 1;
+            this.lblRodape.Text = "Gerador de declarações";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.lblTitulo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(848, 76);
+            this.panel1.TabIndex = 36;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(314, 23);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(235, 32);
+            this.lblTitulo.TabIndex = 13;
+            this.lblTitulo.Text = "Tela de cadastro";
             // 
             // frmCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 546);
-            this.Controls.Add(this.grpConteudo);
-            this.Controls.Add(this.grpTitulo);
+            this.ClientSize = new System.Drawing.Size(848, 749);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtCargo);
+            this.Controls.Add(this.txtSetor);
+            this.Controls.Add(this.lblCracha);
+            this.Controls.Add(this.lblSetor);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.lblCargo);
+            this.Controls.Add(this.txtCracha);
+            this.Controls.Add(this.grpCargo);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.grpSetor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastrar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Cadastrar";
             this.Load += new System.EventHandler(this.frmCadastrar_Load);
-            this.grpTitulo.ResumeLayout(false);
-            this.grpTitulo.PerformLayout();
-            this.grpConteudo.ResumeLayout(false);
-            this.grpConteudo.PerformLayout();
             this.grpCargo.ResumeLayout(false);
             this.grpCargo.PerformLayout();
             this.grpSetor.ResumeLayout(false);
             this.grpSetor.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox grpTitulo;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblCracha;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.GroupBox grpConteudo;
         private System.Windows.Forms.GroupBox grpCargo;
         private System.Windows.Forms.GroupBox grpSetor;
         private System.Windows.Forms.TextBox txtNome;
@@ -1229,5 +1242,9 @@
         private System.Windows.Forms.RadioButton radAlmoxarife;
         private System.Windows.Forms.RadioButton radAjMotorista;
         private System.Windows.Forms.RadioButton radTornMec;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblRodape;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
